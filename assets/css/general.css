@@ -1,0 +1,172 @@
+/* === Global Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0D0D0D;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* === Navbar === */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #0D0D0D;
+    padding: 12px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* === Menu === */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-container a:hover {
+    color: #C2171F;
+}
+
+/* === Dropdown Menu === */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3D4351;
+    z-index: 1000;
+    min-width: 130px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+    color: #007BFF;
+}
+
+/* === Hamburger Menu Dropdown === */
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 75%;
+    right: auto;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show dropdown when active */
+.menu-dropdown.active {
+    display: block;
+}
+
+/* === Search Bar === */
+.search {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.search input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    color: #1B1F3B;
+}
+
+/* === Menu Icon (Hamburger) === */
+.menu-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu-btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    transition: transform 0.7s ease-in-out;
+}
+
+.menu-btn:hover {
+    background-color: #C2171F;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}
+
+/* === Scrollbar Design === */
+::-webkit-scrollbar {
+    width: 10px;
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px #4E4E50;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C2171F;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D8A24A;
+}
