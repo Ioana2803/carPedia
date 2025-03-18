@@ -24,12 +24,8 @@ export class CarBrandsView {
                 const colDiv = this.createElement('div', 'col');
                 const cardDiv = this.createElement('div', 'card');
                 
-                // Apply background image using inline style
+                // Apply background image
                 cardDiv.style.backgroundImage = `url(${brand.image})`;
-                cardDiv.style.backgroundSize = "cover";
-                cardDiv.style.backgroundPosition = "center";
-                cardDiv.style.backgroundRepeat = "no-repeat";
-                cardDiv.style.color = "white";
                 
                 // Card content
                 const cardBody = this.createElement('div', 'card-body');
