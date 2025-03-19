@@ -16,7 +16,7 @@ export class HistorySectionView {
         this.section = this.createElement("section", "section");
 
         // Create and append the image or video
-        this.img = this.createElement("img", "", { src: "/assets/imgs/multiple-cars.jpg", alt: "Cars Showcase" });
+        this.img = this.createElement("img", "", { src: "/assets/imgs/section-edited.jpg", alt: "Cars Showcase" });
         // this.video = this.createElement("video", "", { autoplay: true, muted: true, loop: true });
         // this.video.src = "/imgs/cars-video.mp4";
         // this.section.appendChild(this.video);
