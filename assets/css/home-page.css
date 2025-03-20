@@ -43,6 +43,10 @@
     text-align: center;
 }
 
+p{
+    margin-bottom: 25px;
+}
+
 .history-container {
     max-width: 900px;
     margin: 0 auto;

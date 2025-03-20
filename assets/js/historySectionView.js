@@ -24,7 +24,7 @@ export class HistorySectionView {
 
         // Create a divider with the title
         this.divider = this.createElement("div", "divider");
-        this.title = this.createElement("h2", "", { innerText: "Istoria Generală a Automobilelor" });
+        this.title = this.createElement("h2", "", { innerText: "General History" });
         this.divider.appendChild(this.title);
 
         // Append the divider to the section
@@ -41,14 +41,15 @@ export class HistorySectionView {
 
         // Create left column
         this.historyLeft = this.createElement("div", "history-left");
-        this.historyLeftText1 = this.createElement("p", "", { innerText: "Istoria automobilelor datează de la sfârșitul secolului al XIX-lea, când inventatorii au încercat să înlocuiască trăsurile trase de cai cu vehicule autopropulsate. Primul automobil practic este atribuit lui Karl Benz, care a introdus Benz Patent-Motorwagen în 1886, alimentat de un motor cu combustie internă. Aproximativ în aceeași perioadă, alți inventatori, precum Gottlieb Daimler și Wilhelm Maybach, și-au dezvoltat propriile versiuni de vehicule motorizate." });
-        this.historyLeftText2 = this.createElement("p", "", { innerText: "La început, mașinile erau obiecte de lux, adesea fabricate manual și foarte costisitoare, dar progresele în producție au revoluționat industria. Introducerea liniei de asamblare mobile de către Henry Ford în 1913 a făcut ca automobilele să devină mai accesibile, aducând producția în masă și punând mașinile la dispoziția publicului larg." });
+        this.historyLeftText1 = this.createElement("p", "", { innerText: "The history of automobiles dates back to the late 19th century, when inventors sought to replace horse-drawn carriages with self-propelled vehicles. The first practical automobile is credited to Karl Benz, who introduced the Benz Patent-Motorwagen in 1886, powered by an internal combustion engine. Around the same time, other inventors, including Gottlieb Daimler and Wilhelm Maybach, developed their own versions of motorized vehicles." });
+        this.historyLeftText2 = this.createElement("p", "", { innerText: "Early cars were luxury items, often handcrafted and expensive, but advancements in manufacturing revolutionized the industry." });
         this.historyLeft.append(this.historyLeftText1, this.historyLeftText2);
 
         // Create right column
         this.historyRight = this.createElement("div", "history-right");
-        this.historyRightText = this.createElement("p", "", { innerText: "De-a lungul decadelor, automobilele au evoluat prin îmbunătățiri tehnologice, caracteristici de siguranță și eficiență a consumului de combustibil. De la motoarele cu aburi și cele pe benzină până la ascensiunea vehiculelor electrice din prezent, automobilele au jucat un rol esențial în modelarea transportului modern și a economiilor globale, transformându-se din mașini simple în vehicule complexe, dotate cu inteligență artificială și automatizare." });
-        this.historyRight.appendChild(this.historyRightText);
+        this.historyRightText1 = this.createElement("p", "", { innerText: "Henry Ford’s introduction of the moving assembly line in 1913 made cars more affordable, bringing mass production and accessibility to the public. Over the decades, automobiles evolved with improved technology, safety features, and fuel efficiency. " });
+        this.historyRightText2 = this.createElement("p", "", { innerText: "From steam-powered and gasoline engines to the rise of electric vehicles today, cars have played a pivotal role in shaping modern transportation and global economies, transforming from simple machines to complex, high-tech vehicles integrated with artificial intelligence and automation." });
+        this.historyRight.append(this.historyRightText1, this.historyRightText2);
 
         // Create a vertical divider between the two columns
         this.historyDivider = this.createElement("div", "history-divider");

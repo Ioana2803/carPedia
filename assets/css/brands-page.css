@@ -1,12 +1,3 @@
-/* .container {
-    width: 100%;
-    height: 100%;
-
-    box-sizing: border-box;
-    
-    background: linear-gradient(135deg, rgba(75, 0, 0, 0.6), rgba(139, 0, 0, 0.6), rgba(206, 26, 26, 0.6));
-} */
- 
 .container {
     width: 100%;
     height: 100%;
@@ -14,30 +5,9 @@
     
     /* background: url('/assets/imgs/section1.jpg') no-repeat center center fixed; Test image */
     background-size: cover;
-    background-color: #1B1F3B;
-    filter: brightness(0.8);
+    background: linear-gradient(90deg, rgb(191,30,37) 10%, rgba(46,63,77,1) 100%);
+    /* filter: brightness(0.8); */
     position: relative;
-}
-
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 5px;
-    height: 100%;
-    background: #007BFF; /* Vibrant Blue highlight */
-    animation: glow 2s infinite alternate;
-    z-index: -1;
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px #007BFF;
-    }
-    100% {
-        box-shadow: 0 0 20px #007BFF;
-    }
 }
 
 .row{
@@ -78,6 +48,7 @@ p{
     background-position: center;
     background-repeat: no-repeat;
     color: white;
+    box-shadow: #000000 0 0 10px;
     
     position: relative;
     transition: transform 0.7s ease-in-out;
