@@ -49,9 +49,11 @@ export class NavBarView {
         this.navContainer.append(this.navMenu);
 
         // Add Menu Items
-        // const firstThreeBrands = Object.keys(carBrands).slice(0, 3); 
         this.addMenuItem("Home", "index.html");
-        this.addDropdownMenu("Brands", "brands.html", ["Aston Martin", "Audi", "Bmw"]);
+
+        // Dynamically select the first three brands from carBrands
+        const firstThreeBrands = carBrands.slice(0, 3).map(brand => ({ name: brand.name, hash: brand.hash }));
+        this.addDropdownMenu("Brands", "#", firstThreeBrands);
         this.addMenuItem("News", "#");
 
         // Menu Button
@@ -63,7 +65,7 @@ export class NavBarView {
         // Mobile Dropdown Menu
         this.mobileDropdown = this.createElement("div", ["dropdown", "menu-dropdown"]);
         ["Community", "About", "Account"].forEach(text => {
-            const link = this.createElement("a", "", { href: `${carBrands.hash}`, innerText: text });
+            const link = this.createElement("a", "", { href: "#", innerText: text });
             this.mobileDropdown.append(link);
         });
         this.navContainer.append(this.mobileDropdown);
@@ -78,17 +80,24 @@ export class NavBarView {
 
     addDropdownMenu(text, link, subItems) {
         const li = this.createElement("li");
-        const a = this.createElement("a", "", { href: link, innerText: text });
+        const a = this.createElement("a", "", { href: "brands.html", innerText: text }); // Navigate to brands.html
         const dropdown = this.createElement("div", "dropdown");
-
+    
         subItems.forEach(item => {
-            const subLink = this.createElement("a", "", { href: "#", innerText: item });
+            const subLink = this.createElement("a", "", { href: `brands.html#${item.hash}`, innerText: item.name });
+    
+            subLink.addEventListener("click", (event) => {
+                window.location.hash = item.hash; // Update the URL hash
+                window.location.href = "car-details.html" + item.hash; // Navigate to the brand's page
+            });
+    
             dropdown.append(subLink);
         });
-
+    
         li.append(a, dropdown);
         this.navMenu.append(li);
     }
+    
 
     toggleMenu() {
         this.mobileDropdown.classList.toggle("active");
