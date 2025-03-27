@@ -25,7 +25,7 @@ export class CarBrandsView {
                 const cardDiv = this.createElement('div', 'card');
                 
                 // Apply background image
-                cardDiv.style.backgroundImage = `url(${brand.image})`;
+                cardDiv.style.backgroundImage = `url(${brand.cardImage})`;
                 
                 // Card content
                 const cardBody = this.createElement('div', 'card-body');

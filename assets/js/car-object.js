@@ -1,10 +1,17 @@
 export const carBrands = [
     {   
         name: "Aston Martin", 
-        image: "/assets/cards-imgs/aston-martin.jpg", 
+        cardImage: "/assets/cards-imgs/aston-martin.jpg", 
         hash: "#aston-martin",
         description: "Aston Martin is a British luxury automotive manufacturer, known for its bespoke design and engineering.",
-        history: "Founded in 1913, Aston Martin has been synonymous with luxury grand tourers and high-performance sports cars. The brand gained fame with the DB series, featured in James Bond movies.",
+        topImg: "/assets/imgs/astonSection.jpg",
+        history1: "Aston Martin was founded in 1913 by Robert Bamford and Lionel Martin, originally as Bamford & Martin, selling and servicing cars before developing their own. The first Aston Martin car, the Coal Scuttle, was built in 1915, but World War I delayed production. Financial struggles led to new ownership in 1925, under A.C. Bertelli and Bill Renwick, who helped establish the brand’s reputation with key early models.",
+        history2:[
+            "Through the 1930s and 1940s, Aston Martin built both race and road cars, including the influential Atom prototype. In 1947, industrialist David Brown acquired the company, introducing the DB series, starting with the DB2.",
+            "The 1950s saw racing success, including a 1959 Le Mans win, and the development of the iconic DB4, DB5, and DB6. The 1960s and 1970s brought financial challenges, ownership changes, and new models like the DBS and V8 series.",
+            "Aston Martin’s profile grew through James Bond film appearances. In the 1980s, Victor Gauntlett led the company before Ford acquired it in the late 1980s, bringing financial stability and the launch of the Virage and DB7.",
+            "The 2000s saw the debut of the Vanquish, DB9, and V8 Vantage, as well as new ownership transitions. The company continued its legacy of performance, luxury, and innovation, solidifying its position as a premier British sports car manufacturer."
+        ],
         highlights: [
             "Founded in 1913 in London, UK",
             "Known for luxury sports cars and grand tourers",
@@ -12,14 +19,15 @@ export const carBrands = [
             "Innovative engineering with elegant designs"
         ],
         gallery: [
-            "/assets/gallery/aston-1.jpeg",
-            "/assets/gallery/aston-2.jpeg",
-            "/assets/gallery/aston-3.jpeg"
+            "/assets/gallery/aston-1.jpg",
+            "/assets/gallery/aston-2.jpg",
+            "/assets/gallery/aston-3.jpg"
         ]
     },
+
     { 
         name: "Audi", 
-        image: "/assets/cards-imgs/audi.jpg", 
+        cardImage: "/assets/cards-imgs/audi.jpg", 
         hash: "#audi",
         description: "Audi is a German automotive manufacturer that produces a range of luxury vehicles known for their performance and technology.",
         history: "Audi's roots go back to 1909, and today it is one of the leading premium brands in the world, pushing innovations in electric mobility and autonomous driving.",
@@ -37,7 +45,7 @@ export const carBrands = [
     },
     { 
         name: "BMW", 
-        image: "/assets/cards-imgs/bmw.jpg", 
+        cardImage: "/assets/cards-imgs/bmw.jpg", 
         hash: "#bmw",
         description: "BMW is a German multinational company that produces luxury cars and motorcycles, celebrated for its high-performance vehicles.",
         history: "Originally an aircraft engine manufacturer, BMW transitioned into automobiles and became a global leader in performance and luxury.",
@@ -55,7 +63,7 @@ export const carBrands = [
     },
     { 
         name: "Dodge", 
-        image: "/assets/cards-imgs/dodge.jpg", 
+        cardImage: "/assets/cards-imgs/dodge.jpg", 
         hash: "#dodge",
         description: "Dodge is an American brand that produces a wide range of vehicles, from muscle cars to SUVs, known for their power and style.",
         history: "Dodge was founded in 1900 and has since become an icon of American muscle cars, with legendary models like the Charger and Challenger.",
@@ -73,7 +81,7 @@ export const carBrands = [
     },
     { 
         name: "Ferrari", 
-        image: "/assets/cards-imgs/ferrari.jpg", 
+        cardImage: "/assets/cards-imgs/ferrari.jpg", 
         hash: "#ferrari",
         description: "Ferrari is an Italian luxury sports car manufacturer, known for its fast, stylish, and exclusive vehicles.",
         history: "Founded by Enzo Ferrari in 1939, the brand has been a symbol of speed, power, and exclusivity, dominating motorsports and producing some of the world’s most desired supercars.",
@@ -91,7 +99,7 @@ export const carBrands = [
     },
     { 
         name: "Jaguar", 
-        image: "/assets/cards-imgs/jaguar.jpg", 
+        cardImage: "/assets/cards-imgs/jaguar.jpg", 
         hash: "#jaguar",
         description: "Jaguar is a British luxury vehicle brand, famous for its elegant designs and sporty performance.",
         history: "Jaguar was originally founded as the Swallow Sidecar Company in 1922. Today, it is known for its refined British luxury and high-performance sedans and SUVs.",
@@ -109,7 +117,7 @@ export const carBrands = [
     },
     { 
         name: "Lamborghini", 
-        image: "/assets/cards-imgs/lamborghini.jpg", 
+        cardImage: "/assets/cards-imgs/lamborghini.jpg", 
         hash: "#lamborghini",
         description: "Lamborghini is an Italian manufacturer of high-performance luxury cars, known for their bold designs and powerful engines.",
         history: "Lamborghini was founded in 1963 by Ferruccio Lamborghini to challenge Ferrari. It became known for its exotic, high-performance sports cars with aggressive styling.",
@@ -127,55 +135,55 @@ export const carBrands = [
     },
     { 
         name: "Bugatti", 
-        image: "/assets/cards-imgs/bugatti.jpg", 
+        cardImage: "/assets/cards-imgs/bugatti.jpg", 
         hash: "#bugatti", // Hash-based navigation
         description: "Bugatti is a French luxury automobile manufacturer renowned for its high-speed performance and extraordinary engineering."
     },
     { 
         name: "McLaren", 
-        image: "/assets/cards-imgs/mclaren.jpg", 
+        cardImage: "/assets/cards-imgs/mclaren.jpg", 
         hash: "#mclaren", // Hash-based navigation
         description: "McLaren is a British automaker specializing in the production of high-performance sports cars."
     },
     { 
         name: "Mercedes", 
-        image: "/assets/cards-imgs/mercedes.jpg", 
+        cardImage: "/assets/cards-imgs/mercedes.jpg", 
         hash: "#mercedes", // Hash-based navigation
         description: "Mercedes-Benz is a German luxury vehicle manufacturer known for its luxurious designs and cutting-edge technology."
     },
     { 
         name: "Nissan", 
-        image: "/assets/cards-imgs/nissan.jpg", 
+        cardImage: "/assets/cards-imgs/nissan.jpg", 
         hash: "#nissan", // Hash-based navigation
         description: "Nissan is a Japanese multinational automobile manufacturer known for producing a wide range of affordable vehicles."
     },
     { 
         name: "Pagani", 
-        image: "/assets/cards-imgs/pagani.jpg", 
+        cardImage: "/assets/cards-imgs/pagani.jpg", 
         hash: "#pagani", // Hash-based navigation
         description: "Pagani is an Italian manufacturer of high-performance hypercars, known for their exotic designs and exclusivity."
     },
     { 
         name: "Porsche", 
-        image: "/assets/cards-imgs/porsche.jpg", 
+        cardImage: "/assets/cards-imgs/porsche.jpg", 
         hash: "#porsche", // Hash-based navigation
         description: "Porsche is a German luxury and sports car manufacturer, famous for its precision engineering and sleek designs."
     },
     { 
         name: "Rolls-Royce", 
-        image: "/assets/cards-imgs/rolls-royce.jpg", 
+        cardImage: "/assets/cards-imgs/rolls-royce.jpg", 
         hash: "#rolls-royce", // Hash-based navigation
         description: "Rolls-Royce is a British manufacturer of luxury automobiles, renowned for their impeccable craftsmanship and elegance."
     },
     { 
         name: "Toyota", 
-        image: "/assets/cards-imgs/toyota.jpg", 
+        cardImage: "/assets/cards-imgs/toyota.jpg", 
         hash: "#toyota", // Hash-based navigation
         description: "Toyota is a Japanese multinational automotive manufacturer, producing a wide variety of reliable and affordable vehicles."
     },
     { 
         name: "Volkswagen", 
-        image: "/assets/cards-imgs/volkswagen.jpg", 
+        cardImage: "/assets/cards-imgs/volkswagen.jpg", 
         hash: "#volkswagen", // Hash-based navigation
         description: "Volkswagen is a German automaker known for its iconic cars like the Beetle and its focus on innovation and sustainability."
     }

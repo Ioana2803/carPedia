@@ -53,7 +53,7 @@ export class NavBarView {
 
         // Dynamically select the first three brands from carBrands
         const firstThreeBrands = carBrands.slice(0, 3).map(brand => ({ name: brand.name, hash: brand.hash }));
-        this.addDropdownMenu("Brands", "#", firstThreeBrands);
+        this.addDropdownMenu("Brands", "brands.html", firstThreeBrands);
         this.addMenuItem("News", "#");
 
         // Menu Button
@@ -79,21 +79,29 @@ export class NavBarView {
     }
 
     addDropdownMenu(text, link, subItems) {
-        const li = this.createElement("li");
-        const a = this.createElement("a", "", { href: "brands.html", innerText: text }); // Navigate to brands.html
+        const li = this.createElement("li", "dropdown-container");
+    
+        // Main menu item (clicking this should go to brands.html)
+        const a = this.createElement("a", "", { href: link, innerText: text });
+
+        // Create dropdown menu
         const dropdown = this.createElement("div", "dropdown");
-    
+
         subItems.forEach(item => {
-            const subLink = this.createElement("a", "", { href: `brands.html#${item.hash}`, innerText: item.name });
-    
-            subLink.addEventListener("click", (event) => {
-                window.location.hash = item.hash; // Update the URL hash
-                window.location.href = "car-details.html" + item.hash; // Navigate to the brand's page
+            const subLink = this.createElement("a", "", { 
+                href: `car-details.html?brand=${item.hash}`, 
+                innerText: item.name 
             });
-    
+
+            subLink.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent default link behavior
+                window.location.href = `car-details.html?brand=${item.hash}`; // Navigate to specific brand
+            });
+
             dropdown.append(subLink);
         });
-    
+
+        // Append everything
         li.append(a, dropdown);
         this.navMenu.append(li);
     }

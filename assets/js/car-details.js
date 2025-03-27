@@ -5,6 +5,9 @@ const navParent = document.querySelector(".nav-container");
 const container = document.querySelector(".container");
 new NavBarView(navParent);
 
+const brandName = decodeURIComponent(window.location.hash.substring(1)).replace(/-/g, " ");
+const car = carBrands.find(car => car.name.toLowerCase() === brandName.toLowerCase());
+
 export class CarDetailsView {
     constructor() {
         this.parent = container;
@@ -19,8 +22,24 @@ export class CarDetailsView {
     }
 
     init() {
-        this.heroSection = this.createHeroSection();
-        this.introSection = this.createSection("History", "brand-history", "intro-image");
+        this.topSection = this.createTopSection();
+
+        this.introSection = this.createElement("section", "history-section");
+        this.historyContainer = this.createElement("div", "history-container");
+
+        this.historyContent = this.createElement("div", "history-content");
+        this.historyTitle = this.createElement("h2", "", { innerText: "History" });
+        this.historyText1 = this.createElement("p", "default-text", "");
+        this.historyText2 = this.createElement("p", "history-text", "");
+
+        // Read More Button
+        this.readMoreBtn = this.createElement("button", "read-more-btn", {innerText: "Read More"});
+        this.readMoreBtn.addEventListener("click", () => this.toggleReadMore());
+
+        this.historyContent.append(this.historyTitle, this.historyText1, this.historyText2, this.readMoreBtn);
+        this.historyContainer.appendChild(this.historyContent);
+        this.introSection.appendChild(this.historyContainer);
+
         this.innovationSection = this.createSection("Innovation & Technology", "brand-innovation", "tech-image", true);
         this.flagshipSection = this.createSection("Flagship Model", "flagship-info", "flagship-image");
         this.legacySection = this.createSection("Legacy & Achievements", "brand-legacy", "legacy-image", true);
@@ -28,7 +47,7 @@ export class CarDetailsView {
         this.backLink = this.createBackLink();
 
         this.parent.append(
-            this.heroSection,
+            this.topSection,
             this.introSection,
             this.innovationSection,
             this.flagshipSection,
@@ -38,12 +57,22 @@ export class CarDetailsView {
         );
     }
 
-    createHeroSection() {
+    createTopSection() {
         const section = this.createElement("section", "section");
         this.title = this.createElement("h1", "", { id: "brand-title" });
-        this.slogan = this.createElement("p", "", { id: "brand-slogan" });
-        section.append(this.title, this.slogan);
+        this.img = this.createElement("img", "", { src: car.topImg, alt: "Cars Showcase" });
+        section.append(this.title, this.img);
         return section;
+    }
+
+    toggleReadMore() {
+        if (this.historyText2.classList.contains("expanded")) {
+            this.historyText2.classList.remove("expanded");
+            this.readMoreBtn.innerText = "Read More";
+        } else {
+            this.historyText2.classList.add("expanded");
+            this.readMoreBtn.innerText = "Read Less";
+        }
     }
 
     createSection(titleText, textId, imgId, reverse = false) {
@@ -69,36 +98,33 @@ export class CarDetailsView {
     }
 
     createBackLink() {
-        return this.createElement("a", "back-link", { href: "index.html", innerText: "Back to Main Page" });
+        return this.createElement("a", "back-link", { href: "brands.html", innerText: "Back to Brands Page" });
     }
 
     loadCarDetails() {
-        const brandName = decodeURIComponent(window.location.hash.substring(1)).replace(/-/g, " ");
-        const car = carBrands.find(car => car.name.toLowerCase() === brandName.toLowerCase());
-
         if (car) {
             this.title.innerText = car.name;
-            this.slogan.innerText = car.description;
-            this.heroSection.style.backgroundImage = `url(${car.image})`;
+            // this.topSection.style.backgroundImage = `url(${car.topImg})`;
 
-            document.getElementById("brand-history").innerText = car.history || "Information not available.";
-            document.getElementById("intro-image").src = car.gallery?.[0] || "";
+            document.querySelector(".default-text").innerText = car.history1 || "Information not available.";
+            document.querySelector(".history-text").innerText = car.history2.join(" ") || "Information not available.";
 
             document.getElementById("brand-innovation").innerText = car.highlights?.join(" | ") || "Information not available.";
-            document.getElementById("tech-image").src = car.gallery?.[1] || "";
+            document.getElementById("tech-image").src = car.gallery?.[0] || "";
 
-            document.getElementById("flagship-info").innerText = `Discover ${car.name}'s flagship models.`;
-            document.getElementById("flagship-image").src = car.gallery?.[2] || "";
+            document.getElementById("flagship-info").innerText = "The Aston Martin Vanquish has long been the much-loved flagship of the Aston Martin range and now, in 2024 it has returned as a revived, all-new 823bhp front-engined super GT. With a host of standout features, this new Vanquish model houses the most powerful V12 engine yet and showcases entirely new body styling alongside a refined and upgraded new interior.";
+            document.getElementById("flagship-image").src = car.gallery?.[1] || "";
 
             document.getElementById("brand-legacy").innerText = car.description || "Information not available.";
-            document.getElementById("legacy-image").src = car.gallery?.[3] || "";
+            document.getElementById("legacy-image").src = car.gallery?.[2] || "";
 
             this.galleryContainer.innerHTML = "";
             car.gallery?.forEach(imgSrc => {
                 const img = this.createElement("img", "", { src: imgSrc, alt: car.name });
                 this.galleryContainer.appendChild(img);
             });
-        } else {
+        } 
+        else {
             this.title.innerText = "Car Not Found";
             this.slogan.innerText = "No details available for this brand.";
         }

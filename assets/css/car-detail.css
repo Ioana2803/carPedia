@@ -1,73 +1,102 @@
-/* ==================== General Styles ==================== */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-}
-
+/* ==================== Container Style ==================== */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-size: cover;
+
+    background: linear-gradient(315deg, #0d0d0d, #242a3d);  /*Black to dark navy*/
+    color: whitesmoke;
 }
 
-/* ==================== Hero Section ==================== */
+/* ==================== Top Section ==================== */
 .section {
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    position: relative; /* Needed for absolute positioning */
+    width: 100%;
+}
+
+.section img {
+    width: 100%;
+    height: 70vh;
+    z-index: 0; /* Behind the text */
+    object-fit: cover;
+    filter: brightness(0.5);
 }
 
 #brand-title {
+    position: absolute;
+    z-index: 1;
     font-size: 3rem;
     font-weight: bold;
-}
-
-#brand-slogan {
-    font-size: 1.5rem;
+    color: white;
 }
 
 /* ==================== History Section ==================== */
 .history-section {
-    color: white;
-    padding: 40px 20px;
+    margin: 40px 20px;
     text-align: center;
+    border-radius: 10px;
+    background: #ffffff;
+    /* color: #222; */
 }
 
 .history-container {
     max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* background: rgba(20, 20, 20, 0.5); */
+    background-color: #489daccb;
+    box-shadow: 0 4px 10px rgba(236, 236, 236, 0.2);
 }
 
-.history-columns {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 30px;
-    min-height: 100%;
+.history-container h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.history-left, .history-right {
-    flex: 1;
+.history-container p {
+    font-size: 1.2rem;
+    line-height: 1.2;
     text-align: justify;
-    font-size: 20px;
-    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
-.history-divider {
-    width: 5px;
-    background-color: #C2171F;
-    opacity: 0.6;
+.default-text {
+    max-height: 110px;
+}
+
+.history-text {
+    display: none;
+}
+
+.history-text.expanded {
+    max-height: 500px;
+    display: block;
+}
+
+.read-more-btn {
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+    background: #489dac;
 }
 
 /* ==================== Content Sections ==================== */
@@ -78,15 +107,15 @@ body {
     width: 80%;
     max-width: 1200px;
     padding: 50px 0;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #C2171F;
 }
 
 .content-section img {
-    width: 50%;
-    max-height: 300px;
+    width: 35%;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(236, 236, 236, 0.2);
 }
 
 .content-section div {
@@ -97,11 +126,11 @@ body {
 .content-section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #222;
+    color: white;
 }
 
 .content-section p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -147,7 +176,7 @@ body {
     display: block;
     text-align: center;
     font-size: 1.2rem;
-    margin-top: 30px;
+    margin: 30px 0;
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
@@ -159,21 +188,21 @@ body {
 }
 
 /* ==================== Responsive Design ==================== */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
         text-align: center;
     }
-    
-    .content-section.reverse {
+
+    .reverse {
         flex-direction: column;
     }
-    
+
     .content-section img,
     .content-section div {
         width: 100%;
     }
-    
+
     #gallery-container img {
         width: 45%;
     }
@@ -184,19 +213,15 @@ body {
         font-size: 2.5rem;
     }
 
-    #brand-slogan {
-        font-size: 1.2rem;
-    }
-    
     .content-section h2 {
         font-size: 1.8rem;
     }
-    
+
     .content-section p {
         font-size: 1rem;
     }
-    
+
     #gallery-container img {
         width: 90%;
     }
-}
+} */
