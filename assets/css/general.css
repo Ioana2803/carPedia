@@ -145,7 +145,7 @@ nav {
     background-color: #C2171F;
 }
 
-img {
+.menu-btn img {
     width: 55px;
     height: 55px;
 }
@@ -168,4 +168,10 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #D8A24A;
+}
+
+@media (max-width: 1440px){
+    nav{
+        height: 11vh;
+    }
 }
