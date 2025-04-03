@@ -52,8 +52,8 @@ export class NavBarView {
         this.addMenuItem("Home", "index.html");
 
         // Dynamically select the first three brands from carBrands
-        const firstThreeBrands = carBrands.slice(0, 3).map(brand => ({ name: brand.name, hash: brand.hash }));
-        this.addDropdownMenu("Brands", "brands.html", firstThreeBrands);
+        const brands = carBrands.map(brand => ({ name: brand.name, hash: brand.hash }));
+        this.addDropdownMenu("Brands", "brands.html", brands);
         this.addMenuItem("News", "#");
 
         // Menu Button
@@ -63,11 +63,13 @@ export class NavBarView {
         this.navContainer.append(this.menuButton);
 
         // Mobile Dropdown Menu
-        this.mobileDropdown = this.createElement("div", ["dropdown", "menu-dropdown"]);
+        this.mobileDropdown = this.createElement("div", "menu-dropdown");
+
         ["Community", "About", "Account"].forEach(text => {
             const link = this.createElement("a", "", { href: "#", innerText: text });
             this.mobileDropdown.append(link);
         });
+
         this.navContainer.append(this.mobileDropdown);
     }
 
@@ -83,25 +85,34 @@ export class NavBarView {
     
         // Main menu item (clicking this should go to brands.html)
         const a = this.createElement("a", "", { href: link, innerText: text });
-
+    
         // Create dropdown menu
         const dropdown = this.createElement("div", "dropdown");
-
-        subItems.forEach(item => {
-            const subLink = this.createElement("a", "", { 
-                href: `car-details.html?brand=${item.hash}`, 
-                innerText: item.name 
+    
+        const columns = 3; // Number of columns in the dropdown
+        const columnSize = Math.ceil(subItems.length / columns); // Calculate size of each column
+    
+        for (let i = 0; i < columns; i++) {
+            const column = this.createElement("div", "dropdown-column");
+    
+            subItems.slice(i * columnSize, (i + 1) * columnSize).forEach(item => {
+                const subLink = this.createElement("a", "", { 
+                    href: `car-details.html?brand=${item.hash}`, 
+                    innerText: item.name 
+                });
+    
+                subLink.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    window.location.href = `car-details.html?brand=${item.hash}`;
+                });
+    
+                column.append(subLink);
             });
-
-            subLink.addEventListener("click", (event) => {
-                event.preventDefault(); // Prevent default link behavior
-                window.location.href = `car-details.html?brand=${item.hash}`; // Navigate to specific brand
-            });
-
-            dropdown.append(subLink);
-        });
-
-        // Append everything
+    
+            dropdown.append(column);
+        }
+    
+        // Append elements
         li.append(a, dropdown);
         this.navMenu.append(li);
     }

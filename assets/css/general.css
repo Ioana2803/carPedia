@@ -68,27 +68,52 @@ nav {
 }
 
 /* === Dropdown Menu === */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
     background-color: #3D4351;
-    z-index: 1000;
-    min-width: 130px;
+    min-width: 500px;
+    top: 110%;
+    left: -700%;
+
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-.dropdown a {
+/* Multi-column Layout */
+.dropdown-column {
+    flex: 1;
+    padding: 10px;
+    min-width: 180px;
+}
+
+.dropdown-column a {
     display: block;
     padding: 8px 12px;
     text-decoration: none;
+
     color: white;
+    transition: background 0.3s ease-in-out;
 }
 
-.menu li:hover .dropdown {
+/* .menu li:hover .dropdown {
     display: block;
+} */
+
+.dropdown-column a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover .dropdown {
+    display: flex;
 }
 
 /* === Search Bar === */
@@ -113,16 +138,36 @@ nav {
     display: none;
     position: absolute;
     top: 100%;
-    left: 75%;
-    right: auto;
+    left: 70%;
+    min-width: 130px;
+    background-color: #3D4351;
+
+    padding: 10px 15px;
     border-radius: 5px;
-    padding: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Menu Items */
+.menu-dropdown a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-dropdown a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease-in-out;
 }
 
 /* Show dropdown when active */
 .menu-dropdown.active {
     display: block;
+    opacity: 1;
 }
 
 /* === Menu Icon (Hamburger) === */
@@ -138,7 +183,7 @@ nav {
     cursor: pointer;
     appearance: none;
     background-color: inherit;
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .menu-btn:hover {
@@ -146,8 +191,8 @@ nav {
 }
 
 .menu-btn img {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
 }
 
 /* === Scrollbar Design === */
