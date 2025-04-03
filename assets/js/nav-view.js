@@ -103,9 +103,12 @@ export class NavBarView {
     
                 subLink.addEventListener("click", (event) => {
                     event.preventDefault();
-                    window.location.href = `car-details.html?brand=${item.hash}`;
+                    window.location.hash = item.hash; // Convert spaces to dashes for URL safety
+                    const newUrl = `car-details.html?brand=${item.hash}`; // Redirect to details page
+                    window.location.href = newUrl; // Redirect to the new URL
+                    window.location.reload(); // Reload the page to reflect the new URL
                 });
-    
+
                 column.append(subLink);
             });
     
