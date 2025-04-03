@@ -107,12 +107,12 @@ export class CarDetailsView {
             // this.topSection.style.backgroundImage = `url(${car.topImg})`;
 
             document.querySelector(".default-text").innerText = car.history1 || "Information not available.";
-            document.querySelector(".history-text").innerText = car.history2.join(" ") || "Information not available.";
+            document.querySelector(".history-text").innerText = car.history2?.join(" ") || "Information not available.";
 
             document.getElementById("brand-innovation").innerText = car.highlights?.join(" | ") || "Information not available.";
             document.getElementById("tech-image").src = car.gallery?.[0] || "";
 
-            document.getElementById("flagship-info").innerText = "The Aston Martin Vanquish has long been the much-loved flagship of the Aston Martin range and now, in 2024 it has returned as a revived, all-new 823bhp front-engined super GT. With a host of standout features, this new Vanquish model houses the most powerful V12 engine yet and showcases entirely new body styling alongside a refined and upgraded new interior.";
+            document.getElementById("flagship-info").innerText = car.flagship?.join(" ") || "Information not available.";
             document.getElementById("flagship-image").src = car.gallery?.[1] || "";
 
             document.getElementById("brand-legacy").innerText = car.description || "Information not available.";

@@ -103,9 +103,8 @@ export class NavBarView {
     
                 subLink.addEventListener("click", (event) => {
                     event.preventDefault();
-                    window.location.hash = item.hash; // Convert spaces to dashes for URL safety
-                    const newUrl = `car-details.html?brand=${item.hash}`; // Redirect to details page
-                    window.location.href = newUrl; // Redirect to the new URL
+                    window.location.hash = item.name.replace(/\s+/g, '-'); // Convert spaces to dashes for URL safety
+                    window.location.href = "car-details.html" + window.location.hash; // Redirect to details page
                     window.location.reload(); // Reload the page to reflect the new URL
                 });
 
@@ -119,6 +118,54 @@ export class NavBarView {
         li.append(a, dropdown);
         this.navMenu.append(li);
     }
+    
+
+    // addDropdownMenu(text, link, subItems) {
+    //     const li = this.createElement("li", "dropdown-container");
+    
+    //     // Main menu item (clicking this should go to brands.html)
+    //     const a = this.createElement("a", "", { href: link, innerText: text });
+    
+    //     // Create dropdown menu
+    //     const dropdown = this.createElement("div", "dropdown");
+    
+    //     const columns = 3; // Number of columns in the dropdown
+    //     const columnSize = Math.ceil(subItems.length / columns); // Calculate size of each column
+    
+    //     for (let i = 0; i < columns; i++) {
+    //         const column = this.createElement("div", "dropdown-column");
+    
+    //         subItems.slice(i * columnSize, (i + 1) * columnSize).forEach(item => {
+    //             const subLink = this.createElement("a", "", { 
+    //                 href: `car-details.html?brand=${encodeURIComponent(item.name)}`, 
+    //                 innerText: item.name 
+    //             });
+    
+    //             subLink.addEventListener("click", (event) => {
+    //                 event.preventDefault();
+    //                 const newUrl = `car-details.html?brand=${encodeURIComponent(item.name)}`;
+    
+    //                 console.log("Navigating to:", newUrl);  // Debugging log
+    
+    //                 if (window.location.pathname.includes("car-details.html")) {
+    //                     // If already on car-details.html, replace to force reload
+    //                     window.location.replace(newUrl);
+    //                 } else {
+    //                     // Otherwise, navigate normally
+    //                     window.location.href = newUrl;
+    //                 }
+    //             });
+    
+    //             column.append(subLink);
+    //         });
+    
+    //         dropdown.append(column);
+    //     }
+    
+    //     // Append elements
+    //     li.append(a, dropdown);
+    //     this.navMenu.append(li);
+    // }
     
 
     toggleMenu() {
