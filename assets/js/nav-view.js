@@ -101,8 +101,7 @@ export class NavBarView {
                     innerText: item.name 
                 });
     
-                subLink.addEventListener("click", (event) => {
-                    event.preventDefault();
+                subLink.addEventListener("click", () => {
                     window.location.hash = item.name.replace(/\s+/g, '-'); // Convert spaces to dashes for URL safety
                     window.location.href = "car-details.html" + window.location.hash; // Redirect to details page
                     window.location.reload(); // Reload the page to reflect the new URL

@@ -58,7 +58,7 @@ export const carBrands = [
         gallery: [
             "/assets/gallery/audi-1.jpg",
             "/assets/gallery/audi-2.jpg",
-            // "/assets/gallery/audi-3.jpg"
+            "/assets/gallery/audi-3.jpg"
         ]
     },
     { 
