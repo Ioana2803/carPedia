@@ -32,8 +32,8 @@ p{
 }
 
 .card {
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

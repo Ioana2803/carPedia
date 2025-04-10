@@ -26,9 +26,9 @@ export const carBrands = [
             "most powerful V12 engine yet and showcases entirely new body styling alongside a refined and upgraded new interior."
         ],
         gallery: [
-            "/assets/gallery/aston-1.jpg",
-            "/assets/gallery/aston-2.jpg",
-            "/assets/gallery/aston-3.jpg"
+            "./assets/gallery/aston-1.jpg",
+            "./assets/gallery/aston-2.jpg",
+            "./assets/gallery/aston-3.jpg"
         ]
     },
 
@@ -56,9 +56,9 @@ export const carBrands = [
             "The Audi A8 is the brand's flagship luxury sedan, known for its advanced technology, luxurious interior, and powerful performance. It features a range of engines, including V6 and V8 options, and offers cutting-edge driver assistance systems.",
         ],
         gallery: [
-            "/assets/gallery/audi-1.jpg",
-            "/assets/gallery/audi-2.jpg",
-            "/assets/gallery/audi-3.jpg"
+            "./assets/gallery/audi-1.jpg",
+            "./assets/gallery/audi-2.jpg",
+            "./assets/gallery/audi-3.jpg"
         ]
     },
     { 
