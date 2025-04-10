@@ -1,10 +1,10 @@
 export const carBrands = [
     {   
         name: "Aston Martin", 
-        cardImage: "/assets/cards-imgs/aston-martin.jpg", 
+        cardImage: "./assets/cards-imgs/aston-martin.jpg", 
         hash: "#aston-martin",
         description: "Aston Martin is a British luxury automotive manufacturer, known for its bespoke design and engineering.",
-        topImg: "/assets/imgs/astonSection.jpg",
+        topImg: "./assets/imgs/astonSection.jpg",
         history1: [
             "Aston Martin was founded in 1913 by Robert Bamford and Lionel Martin, originally as Bamford & Martin, selling and servicing cars before developing their own. The first Aston Martin car, the Coal Scuttle, was built in 1915, but World",
             "War I delayed production. Financial struggles led to new ownership in 1925, under A.C. Bertelli and Bill Renwick, who helped establish the brand’s reputation with key early models."
@@ -34,10 +34,10 @@ export const carBrands = [
 
     { 
         name: "Audi", 
-        cardImage: "/assets/cards-imgs/audi.jpg", 
+        cardImage: "./assets/cards-imgs/audi.jpg", 
         hash: "#audi",
         description: "Audi is a German automotive manufacturer that produces a range of luxury vehicles known for their performance and technology.",
-        topImg: "/assets/imgs/audiSection.jpg",
+        topImg: "./assets/imgs/audiSection.jpg",
         history1:[
             "Audi’s history dates back to 1909 when August Horch founded Audi Automobilwerke after leaving his first company, Horch. The name “Audi” comes from the Latin translation of “Horch,” meaning “listen.” In 1932, Audi merged with Horch, DKW, and Wanderer to form Auto Union, symbolized by the four interlinked rings in its logo.",
         ],
