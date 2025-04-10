@@ -63,7 +63,7 @@ export const carBrands = [
     },
     { 
         name: "BMW", 
-        cardImage: "/assets/cards-imgs/bmw.jpg", 
+        cardImage: "./assets/cards-imgs/bmw.jpg", 
         hash: "#bmw",
         description: "BMW is a German multinational company that produces luxury cars and motorcycles, celebrated for its high-performance vehicles.",
         history: "Originally an aircraft engine manufacturer, BMW transitioned into automobiles and became a global leader in performance and luxury.",
@@ -74,14 +74,14 @@ export const carBrands = [
             "Luxury meets driving pleasure with their tagline 'The Ultimate Driving Machine'"
         ],
         gallery: [
-            "/assets/gallery/bmw-1.jpg",
-            "/assets/gallery/bmw-2.jpg",
-            "/assets/gallery/bmw-3.jpg"
+            "./assets/gallery/bmw-1.jpg",
+            "./assets/gallery/bmw-2.jpg",
+            "./assets/gallery/bmw-3.jpg"
         ]
     },
     { 
         name: "Dodge", 
-        cardImage: "/assets/cards-imgs/dodge.jpg", 
+        cardImage: "./assets/cards-imgs/dodge.jpg", 
         hash: "#dodge",
         description: "Dodge is an American brand that produces a wide range of vehicles, from muscle cars to SUVs, known for their power and style.",
         history: "Dodge was founded in 1900 and has since become an icon of American muscle cars, with legendary models like the Charger and Challenger.",
@@ -92,14 +92,14 @@ export const carBrands = [
             "Home of the Hellcat and Demon series"
         ],
         gallery: [
-            "/assets/gallery/dodge-1.jpg",
-            "/assets/gallery/dodge-2.jpg",
-            "/assets/gallery/dodge-3.jpg"
+            "./assets/gallery/dodge-1.jpg",
+            "./assets/gallery/dodge-2.jpg",
+            "./assets/gallery/dodge-3.jpg"
         ]
     },
     { 
         name: "Ferrari", 
-        cardImage: "/assets/cards-imgs/ferrari.jpg", 
+        cardImage: "./assets/cards-imgs/ferrari.jpg", 
         hash: "#ferrari",
         description: "Ferrari is an Italian luxury sports car manufacturer, known for its fast, stylish, and exclusive vehicles.",
         history: "Founded by Enzo Ferrari in 1939, the brand has been a symbol of speed, power, and exclusivity, dominating motorsports and producing some of the world’s most desired supercars.",
@@ -110,14 +110,14 @@ export const carBrands = [
             "Iconic models like LaFerrari, F40, and SF90 Stradale"
         ],
         gallery: [
-            "/assets/gallery/ferrari-1.jpg",
-            "/assets/gallery/ferrari-2.jpg",
-            "/assets/gallery/ferrari-3.jpg"
+            "./assets/gallery/ferrari-1.jpg",
+            "./assets/gallery/ferrari-2.jpg",
+            "./assets/gallery/ferrari-3.jpg"
         ]
     },
     { 
         name: "Jaguar", 
-        cardImage: "/assets/cards-imgs/jaguar.jpg", 
+        cardImage: "./assets/cards-imgs/jaguar.jpg", 
         hash: "#jaguar",
         description: "Jaguar is a British luxury vehicle brand, famous for its elegant designs and sporty performance.",
         history: "Jaguar was originally founded as the Swallow Sidecar Company in 1922. Today, it is known for its refined British luxury and high-performance sedans and SUVs.",
@@ -128,14 +128,14 @@ export const carBrands = [
             "Strong presence in motorsports history"
         ],
         gallery: [
-            "/assets/gallery/jaguar-1.jpg",
-            "/assets/gallery/jaguar-2.jpg",
-            "/assets/gallery/jaguar-3.jpg"
+            "./assets/gallery/jaguar-1.jpg",
+            "./assets/gallery/jaguar-2.jpg",
+            "./assets/gallery/jaguar-3.jpg"
         ]
     },
     { 
         name: "Lamborghini", 
-        cardImage: "/assets/cards-imgs/lamborghini.jpg", 
+        cardImage: "./assets/cards-imgs/lamborghini.jpg", 
         hash: "#lamborghini",
         description: "Lamborghini is an Italian manufacturer of high-performance luxury cars, known for their bold designs and powerful engines.",
         history: "Lamborghini was founded in 1963 by Ferruccio Lamborghini to challenge Ferrari. It became known for its exotic, high-performance sports cars with aggressive styling.",
@@ -146,62 +146,62 @@ export const carBrands = [
             "Innovative aerodynamics and futuristic designs"
         ],
         gallery: [
-            "/assets/gallery/lamborghini-1.jpg",
-            "/assets/gallery/lamborghini-2.jpg",
-            "/assets/gallery/lamborghini-3.jpg"
+            "./assets/gallery/lamborghini-1.jpg",
+            "./assets/gallery/lamborghini-2.jpg",
+            "./assets/gallery/lamborghini-3.jpg"
         ]
     },
     { 
         name: "Bugatti", 
-        cardImage: "/assets/cards-imgs/bugatti.jpg", 
+        cardImage: "./assets/cards-imgs/bugatti.jpg", 
         hash: "#bugatti", // Hash-based navigation
         description: "Bugatti is a French luxury automobile manufacturer renowned for its high-speed performance and extraordinary engineering."
     },
     { 
         name: "McLaren", 
-        cardImage: "/assets/cards-imgs/mclaren.jpg", 
+        cardImage: "./assets/cards-imgs/mclaren.jpg", 
         hash: "#mclaren", // Hash-based navigation
         description: "McLaren is a British automaker specializing in the production of high-performance sports cars."
     },
     { 
         name: "Mercedes", 
-        cardImage: "/assets/cards-imgs/mercedes.jpg", 
+        cardImage: "./assets/cards-imgs/mercedes.jpg", 
         hash: "#mercedes", // Hash-based navigation
         description: "Mercedes-Benz is a German luxury vehicle manufacturer known for its luxurious designs and cutting-edge technology."
     },
     { 
         name: "Nissan", 
-        cardImage: "/assets/cards-imgs/nissan.jpg", 
+        cardImage: "./assets/cards-imgs/nissan.jpg", 
         hash: "#nissan", // Hash-based navigation
         description: "Nissan is a Japanese multinational automobile manufacturer known for producing a wide range of affordable vehicles."
     },
     { 
         name: "Pagani", 
-        cardImage: "/assets/cards-imgs/pagani.jpg", 
+        cardImage: "./assets/cards-imgs/pagani.jpg", 
         hash: "#pagani", // Hash-based navigation
         description: "Pagani is an Italian manufacturer of high-performance hypercars, known for their exotic designs and exclusivity."
     },
     { 
         name: "Porsche", 
-        cardImage: "/assets/cards-imgs/porsche.jpg", 
+        cardImage: "./assets/cards-imgs/porsche.jpg", 
         hash: "#porsche", // Hash-based navigation
         description: "Porsche is a German luxury and sports car manufacturer, famous for its precision engineering and sleek designs."
     },
     { 
         name: "Rolls-Royce", 
-        cardImage: "/assets/cards-imgs/rolls-royce.jpg", 
+        cardImage: "./assets/cards-imgs/rolls-royce.jpg", 
         hash: "#rolls-royce", // Hash-based navigation
         description: "Rolls-Royce is a British manufacturer of luxury automobiles, renowned for their impeccable craftsmanship and elegance."
     },
     { 
         name: "Toyota", 
-        cardImage: "/assets/cards-imgs/toyota.jpg", 
+        cardImage: "./assets/cards-imgs/toyota.jpg", 
         hash: "#toyota", // Hash-based navigation
         description: "Toyota is a Japanese multinational automotive manufacturer, producing a wide variety of reliable and affordable vehicles."
     },
     { 
         name: "Volkswagen", 
-        cardImage: "/assets/cards-imgs/volkswagen.jpg", 
+        cardImage: "./assets/cards-imgs/volkswagen.jpg", 
         hash: "#volkswagen", // Hash-based navigation
         description: "Volkswagen is a German automaker known for its iconic cars like the Beetle and its focus on innovation and sustainability."
     }

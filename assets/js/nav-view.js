@@ -29,7 +29,7 @@ export class NavBarView {
 
         // Logo Section
         this.logo = this.createElement("div", "logo");
-        this.logoImg = this.createElement("img", "", { src: "/assets/imgs/car-logo.png", alt: "AutoPedia Logo" });
+        this.logoImg = this.createElement("img", "", { src: "./assets/imgs/car-logo.png", alt: "AutoPedia Logo" });
         this.logoSpan = this.createElement("span", "logo-text", { innerText: "AutoPedia" });
         this.logo.append(this.logoImg, this.logoSpan);
         this.nav.append(this.logo);
@@ -58,7 +58,7 @@ export class NavBarView {
 
         // Menu Button
         this.menuButton = this.createElement("button", "menu-btn", { onclick: () => this.toggleMenu() });
-        this.menuButtonImg = this.createElement("img", "", { src: "/assets/imgs/menu2-white.png", alt: "Menu" });
+        this.menuButtonImg = this.createElement("img", "", { src: "./assets/imgs/menu2-white.png", alt: "Menu" });
         this.menuButton.append(this.menuButtonImg);
         this.navContainer.append(this.menuButton);
 
@@ -118,55 +118,6 @@ export class NavBarView {
         this.navMenu.append(li);
     }
     
-
-    // addDropdownMenu(text, link, subItems) {
-    //     const li = this.createElement("li", "dropdown-container");
-    
-    //     // Main menu item (clicking this should go to brands.html)
-    //     const a = this.createElement("a", "", { href: link, innerText: text });
-    
-    //     // Create dropdown menu
-    //     const dropdown = this.createElement("div", "dropdown");
-    
-    //     const columns = 3; // Number of columns in the dropdown
-    //     const columnSize = Math.ceil(subItems.length / columns); // Calculate size of each column
-    
-    //     for (let i = 0; i < columns; i++) {
-    //         const column = this.createElement("div", "dropdown-column");
-    
-    //         subItems.slice(i * columnSize, (i + 1) * columnSize).forEach(item => {
-    //             const subLink = this.createElement("a", "", { 
-    //                 href: `car-details.html?brand=${encodeURIComponent(item.name)}`, 
-    //                 innerText: item.name 
-    //             });
-    
-    //             subLink.addEventListener("click", (event) => {
-    //                 event.preventDefault();
-    //                 const newUrl = `car-details.html?brand=${encodeURIComponent(item.name)}`;
-    
-    //                 console.log("Navigating to:", newUrl);  // Debugging log
-    
-    //                 if (window.location.pathname.includes("car-details.html")) {
-    //                     // If already on car-details.html, replace to force reload
-    //                     window.location.replace(newUrl);
-    //                 } else {
-    //                     // Otherwise, navigate normally
-    //                     window.location.href = newUrl;
-    //                 }
-    //             });
-    
-    //             column.append(subLink);
-    //         });
-    
-    //         dropdown.append(column);
-    //     }
-    
-    //     // Append elements
-    //     li.append(a, dropdown);
-    //     this.navMenu.append(li);
-    // }
-    
-
     toggleMenu() {
         this.mobileDropdown.classList.toggle("active");
         this.rotateRight(this.menuButton, 90);
