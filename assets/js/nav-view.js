@@ -29,7 +29,7 @@ export class NavBarView {
 
         // Logo Section
         this.logo = this.createElement("div", "logo");
-        this.logoImg = this.createElement("img", "", { src: "./imgs/car-logo.png", alt: "AutoPedia Logo" });
+        this.logoImg = this.createElement("img", "", { src: "./assets/imgs/car-logo.png", alt: "AutoPedia Logo" });
         this.logoSpan = this.createElement("span", "logo-text", { innerText: "AutoPedia" });
         this.logo.append(this.logoImg, this.logoSpan);
         this.nav.append(this.logo);
