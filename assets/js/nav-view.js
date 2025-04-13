@@ -9,16 +9,16 @@ export class NavBarView {
 
     createElement(tag, classNames = "", attributes = {}) {
         const elem = document.createElement(tag);
-
+    
         if (Array.isArray(classNames)) {
             elem.classList.add(...classNames);
         } else if (classNames) {
             elem.classList.add(classNames);
         }
-
-        Object.keys(attributes).forEach(attr => elem[attr] = attributes[attr]);
+    
+        Object.keys(attributes).forEach(attr => elem.setAttribute(attr, attributes[attr]));
         return elem;
-    }
+    }    
 
     init() {
         // Create header and nav
