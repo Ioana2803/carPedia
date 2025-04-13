@@ -16,7 +16,10 @@ export class NavBarView {
             elem.classList.add(classNames);
         }
     
-        Object.keys(attributes).forEach(attr => elem.setAttribute(attr, attributes[attr]));
+        Object.keys(attributes).forEach(attr => {
+            elem.setAttribute(attr, attributes[attr]);
+        });
+        
         return elem;
     }    
 
