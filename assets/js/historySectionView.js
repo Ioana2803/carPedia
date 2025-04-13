@@ -7,11 +7,8 @@ export class HistorySectionView {
     createElement(tag, className = "", attributes = {}) {
         const elem = document.createElement(tag);
         if (className) elem.classList.add(className);
-
-        Object.keys(attributes).forEach(attr => {
-            elem.setAttribute(attr, attributes[attr]);
-        });
         
+        Object.keys(attributes).forEach(attr => elem[attr] = attributes[attr]);
         return elem;
     }
 

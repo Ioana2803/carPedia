@@ -9,19 +9,16 @@ export class NavBarView {
 
     createElement(tag, classNames = "", attributes = {}) {
         const elem = document.createElement(tag);
-    
+
         if (Array.isArray(classNames)) {
             elem.classList.add(...classNames);
         } else if (classNames) {
             elem.classList.add(classNames);
         }
-    
-        Object.keys(attributes).forEach(attr => {
-            elem.setAttribute(attr, attributes[attr]);
-        });
-        
+
+        Object.keys(attributes).forEach(attr => elem[attr] = attributes[attr]);
         return elem;
-    }    
+    }
 
     init() {
         // Create header and nav
@@ -32,7 +29,7 @@ export class NavBarView {
 
         // Logo Section
         this.logo = this.createElement("div", "logo");
-        this.logoImg = this.createElement("img", "", { src: "./assets/imgs/car-logo.png", alt: "AutoPedia Logo" });
+        this.logoImg = this.createElement("img", "", { src: "./imgs/car-logo.png", alt: "AutoPedia Logo" });
         this.logoSpan = this.createElement("span", "logo-text", { innerText: "AutoPedia" });
         this.logo.append(this.logoImg, this.logoSpan);
         this.nav.append(this.logo);
