@@ -25,6 +25,9 @@ export const carBrands = [
             "The Aston Martin Vanquish has long been the much-loved flagship of the Aston Martin range and now, in 2024 it has returned as a revived, all-new 823bhp front-engined super GT. With a host of standout features, this new Vanquish model houses the",
             "most powerful V12 engine yet and showcases entirely new body styling alongside a refined and upgraded new interior."
         ],
+        legacy:[
+            "Aston Martin is the embodiment of British elegance and performance. With a legacy rooted in handcrafted luxury and racing pedigree, the brand rose to global fame through its association with James Bond. From the iconic DB5 to modern marvels like the Valkyrie, Aston Martin continues to fuse timeless design with cutting-edge engineering."
+        ],
         gallery: [
             "./assets/gallery/aston-1.jpg",
             "./assets/gallery/aston-2.jpg",
@@ -55,6 +58,9 @@ export const carBrands = [
         flagship:[
             "The Audi A8 is the brand's flagship luxury sedan, known for its advanced technology, luxurious interior, and powerful performance. It features a range of engines, including V6 and V8 options, and offers cutting-edge driver assistance systems.",
         ],
+        legacy:[
+            "Audi’s legacy is defined by innovation, precision, and performance. From pioneering quattro all-wheel drive to dominating Le Mans, Audi has consistently pushed automotive boundaries. Guided by its motto 'Vorsprung durch Technik', the brand blends luxury with cutting-edge technology, shaping the future of mobility."
+        ],
         gallery: [
             "./assets/gallery/audi-1.jpg",
             "./assets/gallery/audi-2.jpg",
@@ -66,12 +72,23 @@ export const carBrands = [
         cardImage: "./assets/cards-imgs/bmw.jpg", 
         hash: "#bmw",
         description: "BMW is a German multinational company that produces luxury cars and motorcycles, celebrated for its high-performance vehicles.",
-        history: "Originally an aircraft engine manufacturer, BMW transitioned into automobiles and became a global leader in performance and luxury.",
+        topImg: "./assets/imgs/bmwSection.jpg",
+        history1:[
+            "Bayerische Motoren Werke AG, better known as BMW, was founded in 1916, originally producing aircraft engines during World War I. After the war, BMW shifted its focus to motorcycles and eventually automobiles, launching its first car in 1928. The brand rose to prominence in the post-war era, becoming known for its engineering precision, rear-wheel-drive dynamics, and performance-oriented design.",
+        ],
+        history2:[
+            "Through iconic models like the 3 Series and M division vehicles, BMW established itself as a leader in the luxury and sports sedan market. With its roots in German innovation and a consistent commitment to the driving experience, BMW has become one of the most respected and influential car manufacturers in the world.",
+            "Over the decades, BMW has expanded its influence through innovation and motorsport success. The creation of the BMW M division in the 1970s brought high-performance models that redefined what sports sedans could be. In racing, BMW achieved global recognition in touring car championships, Formula 1, and endurance races like Le Mans. More recently, BMW has embraced sustainability with its electric",
+            "and hybrid “i” series, blending performance with cutting-edge technology. Today, BMW continues to evolve—honoring its heritage while driving toward a future of electrification, autonomy, and intelligent design."
+        ],
         highlights: [
             "Founded in 1916 in Germany",
             "M Performance series known for speed and power",
             "Innovator in hybrid and electric technology",
             "Luxury meets driving pleasure with their tagline 'The Ultimate Driving Machine'"
+        ],
+        legacy:[
+            "BMW’s legacy is built on precision, power, and the thrill of driving. Known for its slogan “The Ultimate Driving Machine,” BMW has mastered the balance between luxury and performance. With legendary models like the M3 and its success in touring car championships, BMW has become a benchmark in automotive innovation and driving pleasure."
         ],
         gallery: [
             "./assets/gallery/bmw-1.jpg",
@@ -84,12 +101,16 @@ export const carBrands = [
         cardImage: "./assets/cards-imgs/dodge.jpg", 
         hash: "#dodge",
         description: "Dodge is an American brand that produces a wide range of vehicles, from muscle cars to SUVs, known for their power and style.",
+        topImg: "./assets/imgs/dodgeSection.jpg",
         history: "Dodge was founded in 1900 and has since become an icon of American muscle cars, with legendary models like the Charger and Challenger.",
         highlights: [
             "Founded in 1900 in Detroit, USA",
             "Muscle cars like the Dodge Challenger and Charger",
             "SRT performance division",
             "Home of the Hellcat and Demon series"
+        ],
+        legacy:[
+            "Dodge is a symbol of American muscle, rebellion, and raw power. From the legendary Charger and Challenger to its modern-day Hellcat lineup, Dodge has carved out a legacy built on bold design and unrelenting performance. Its influence in drag racing and pop culture has secured its place as a true icon of American horsepower."
         ],
         gallery: [
             "./assets/gallery/dodge-1.jpg",
@@ -102,12 +123,16 @@ export const carBrands = [
         cardImage: "./assets/cards-imgs/ferrari.jpg", 
         hash: "#ferrari",
         description: "Ferrari is an Italian luxury sports car manufacturer, known for its fast, stylish, and exclusive vehicles.",
+        topImg: "./assets/imgs/ferrariSection.jpg",
         history: "Founded by Enzo Ferrari in 1939, the brand has been a symbol of speed, power, and exclusivity, dominating motorsports and producing some of the world’s most desired supercars.",
         highlights: [
             "Founded in 1939 by Enzo Ferrari",
             "Formula 1 legacy with numerous championships",
             "Exclusive high-performance sports cars",
             "Iconic models like LaFerrari, F40, and SF90 Stradale"
+        ],
+        legacy:[
+            "Ferrari is the pinnacle of Italian performance and passion. With a history rich in Formula 1 dominance and road-going masterpieces, Ferrari has defined speed, style, and exclusivity. Each model, from the 250 GTO to the LaFerrari, represents a fusion of art and engineering, capturing hearts and records across the globe."
         ],
         gallery: [
             "./assets/gallery/ferrari-1.jpg",
