@@ -87,6 +87,9 @@ export const carBrands = [
             "Innovator in hybrid and electric technology",
             "Luxury meets driving pleasure with their tagline 'The Ultimate Driving Machine'"
         ],
+        flagship:[
+            "The BMW G70, part of the latest 7 Series, combines cutting-edge tech with refined elegance. Available with petrol, hybrid, and electric powertrains (as the BMW i7), it features the BMW Curved Display, iDrive 8.5, and an optional 31-inch 8K Theater Screen in the rear. With semi-autonomous driving, crystal controls, and a bold design, the G70 sets a new standard for innovation in luxury sedans."
+        ],
         legacy:[
             "BMW’s legacy is built on precision, power, and the thrill of driving. Known for its slogan “The Ultimate Driving Machine,” BMW has mastered the balance between luxury and performance. With legendary models like the M3 and its success in touring car championships, BMW has become a benchmark in automotive innovation and driving pleasure."
         ],
@@ -97,17 +100,57 @@ export const carBrands = [
         ]
     },
     { 
+        name: "Bugatti", 
+        cardImage: "./assets/cards-imgs/bugatti.jpg", 
+        hash: "#bugatti",
+        description: "Bugatti is a French luxury automobile manufacturer renowned for its high-speed performance and extraordinary engineering.",
+        topImg: "./assets/imgs/bugattiSection.jpg",
+        history1:[
+            "Bugatti was founded in 1909 by Italian-born French automobile designer Ettore Bugatti in Molsheim, Alsace. The brand quickly gained a reputation for producing high-performance cars with innovative designs and engineering excellence. The Bugatti Type 35, introduced in the 1920s, became one of the most successful racing cars of its time, dominating motorsport events.",
+        ],
+        history2:[
+            "After World War II, the brand faced financial difficulties and changed ownership several times. In 1998, Volkswagen AG acquired Bugatti, leading to a revival of the brand with the introduction of the Veyron in 2005. The Veyron set new standards for speed and luxury, becoming one of the fastest production cars in the world.",
+            "In 2016, Bugatti launched the Chiron, a successor to the Veyron, boasting even more power and advanced technology. Bugatti continues to push the boundaries of automotive engineering, blending performance with luxury and exclusivity."
+        ],
+        highlights: [
+            "Founded in 1909 in France",
+            "Known for luxury hypercars and speed records",
+            "Veyron and Chiron are iconic models",
+            "Focus on performance, design, and exclusivity"
+        ],
+        flagship:[
+            "The Bugatti Chiron is a hypercar that redefines performance, featuring an 8.0L quad-turbocharged W16 engine producing 1,479 hp. With a top speed of 261 mph and a 0-60 mph time of just 2.4 seconds, the Chiron combines luxury and cutting-edge technology, making it one of the fastest and most exclusive cars in the world."
+        ],
+        legacy:[
+            "Bugatti is synonymous with speed, luxury, and engineering excellence. From the iconic Type 35 to the modern Chiron, Bugatti has consistently pushed the boundaries of automotive performance. With a legacy steeped in racing history and innovation, Bugatti remains a symbol of exclusivity and prestige in the automotive world."
+        ],
+        gallery: [
+            "./assets/gallery/bugatti-1.jpg",
+            "./assets/gallery/bugatti-2.jpg",
+            "./assets/gallery/bugatti-3.jpg"
+        ]
+    },
+    { 
         name: "Dodge", 
         cardImage: "./assets/cards-imgs/dodge.jpg", 
         hash: "#dodge",
         description: "Dodge is an American brand that produces a wide range of vehicles, from muscle cars to SUVs, known for their power and style.",
         topImg: "./assets/imgs/dodgeSection.jpg",
-        history: "Dodge was founded in 1900 and has since become an icon of American muscle cars, with legendary models like the Charger and Challenger.",
+        history1:[
+            "Dodge was founded in 1900 by brothers John and Horace Dodge in Detroit, Michigan. Initially, they produced bicycle parts and later transitioned to manufacturing automobile components. In 1914, Dodge introduced its first complete car, the Dodge Model 30, which gained popularity for its durability and performance.",
+        ],
+        history2:[
+            "In 1928, Dodge was acquired by Chrysler Corporation, which helped expand its reach and product lineup. The brand became known for its powerful engines and performance-oriented vehicles, particularly during the muscle car era of the 1960s and 1970s. Iconic models like the Dodge Charger and Challenger solidified Dodge's reputation as a manufacturer of high-performance cars.",
+            "In the 1980s and 1990s, Dodge diversified its offerings with trucks and SUVs, including the popular Dodge Ram. The brand continued to innovate with models like the Dodge Viper, a high-performance sports car that became a symbol of American muscle. In recent years, Dodge has focused on performance-oriented vehicles, including the Hellcat and Demon models, which have garnered a cult following among car enthusiasts."
+        ],
         highlights: [
             "Founded in 1900 in Detroit, USA",
             "Muscle cars like the Dodge Challenger and Charger",
             "SRT performance division",
             "Home of the Hellcat and Demon series"
+        ],
+        flagship:[
+          
         ],
         legacy:[
             "Dodge is a symbol of American muscle, rebellion, and raw power. From the legendary Charger and Challenger to its modern-day Hellcat lineup, Dodge has carved out a legacy built on bold design and unrelenting performance. Its influence in drag racing and pop culture has secured its place as a true icon of American horsepower."
@@ -124,12 +167,21 @@ export const carBrands = [
         hash: "#ferrari",
         description: "Ferrari is an Italian luxury sports car manufacturer, known for its fast, stylish, and exclusive vehicles.",
         topImg: "./assets/imgs/ferrariSection.jpg",
-        history: "Founded by Enzo Ferrari in 1939, the brand has been a symbol of speed, power, and exclusivity, dominating motorsports and producing some of the world’s most desired supercars.",
+        history1:[
+            "Ferrari was founded in 1939 by Enzo Ferrari in Maranello, Italy. The company initially operated as Auto Avio Costruzioni, producing aircraft accessories and machine tools. The first car to bear the Ferrari name, the 125 S, was built in 1947. Enzo Ferrari’s passion for racing and performance drove the brand’s early success.",
+        ],
+        history2:[
+            "In the 1950s and 1960s, Ferrari became a dominant force in motorsport, particularly in Formula 1, winning numerous championships. Iconic models like the 250 GTO and the Daytona solidified Ferrari’s reputation for high-performance road cars. The brand’s distinctive prancing horse logo and signature red color became synonymous with speed and luxury.",
+            "In the 1970s and 1980s, Ferrari expanded its lineup with models like the 308 and Testarossa, appealing to a broader audience. The brand continued to innovate with advanced technology and design, producing iconic models like the F40 and Enzo Ferrari. In the 2000s, Ferrari embraced hybrid technology with the LaFerrari, showcasing its commitment to performance and sustainability."
+        ],
         highlights: [
             "Founded in 1939 by Enzo Ferrari",
             "Formula 1 legacy with numerous championships",
             "Exclusive high-performance sports cars",
             "Iconic models like LaFerrari, F40, and SF90 Stradale"
+        ],
+        flagship:[
+            "The Ferrari SF90 Stradale is a groundbreaking plug-in hybrid supercar, blending a 4.0L twin-turbo V8 with three electric motors to deliver 986 hp. It accelerates from 0 to 100 km/h in just 2.5 seconds and features advanced all-wheel drive and torque vectoring. With its aggressive design and cutting-edge tech, the SF90 sets a new benchmark for Ferrari’s performance and innovation."
         ],
         legacy:[
             "Ferrari is the pinnacle of Italian performance and passion. With a history rich in Formula 1 dominance and road-going masterpieces, Ferrari has defined speed, style, and exclusivity. Each model, from the 250 GTO to the LaFerrari, represents a fusion of art and engineering, capturing hearts and records across the globe."
@@ -145,12 +197,25 @@ export const carBrands = [
         cardImage: "./assets/cards-imgs/jaguar.jpg", 
         hash: "#jaguar",
         description: "Jaguar is a British luxury vehicle brand, famous for its elegant designs and sporty performance.",
-        history: "Jaguar was originally founded as the Swallow Sidecar Company in 1922. Today, it is known for its refined British luxury and high-performance sedans and SUVs.",
+        topImg: "./assets/imgs/jaguarSection.jpg",
+        history1: [
+            "Jaguar was founded in 1922 as the Swallow Sidecar Company, initially producing motorcycle sidecars. The company transitioned to cars in the 1930s, with the SS Jaguar 100 becoming its first model. After World War II, the brand was renamed Jaguar Cars Limited, and it gained fame for its luxury sports cars and innovative designs.",
+        ],
+        history2: [
+            "In the 1950s and 1960s, Jaguar became known for its iconic models like the XK120, E-Type, and XJ series. The brand’s success in motorsport, particularly at Le Mans, solidified its reputation for performance and style. In the 1980s, Jaguar faced financial challenges and was acquired by Ford in 1989.",
+            "In the 2000s, Jaguar underwent a transformation under Ford’s ownership, introducing modern designs and technology. In 2008, Tata Motors acquired Jaguar Land Rover, leading to a new era of innovation and growth. Today, Jaguar continues to produce luxury vehicles with a focus on performance and sustainability."
+        ],
         highlights: [
             "Founded in 1922 in England",
             "Known for luxury and high-performance vehicles",
             "Famous models include the E-Type and F-Type",
             "Strong presence in motorsports history"
+        ],
+        flagship:[
+            "The Jaguar I-PACE is the brand's first all-electric SUV, combining luxury with cutting-edge technology. It features a sleek design, a spacious interior, and advanced driver assistance systems. With a range of up to 292 miles and rapid charging capabilities, the I-PACE delivers performance and sustainability without compromise."
+        ],
+        legacy:[
+            "Jaguar is synonymous with British luxury and performance. With a legacy of elegance and innovation, Jaguar has produced iconic models like the E-Type and F-Type, blending style with exhilarating performance. Its commitment to craftsmanship and cutting-edge technology continues to define the brand’s identity in the automotive world."
         ],
         gallery: [
             "./assets/gallery/jaguar-1.jpg",
@@ -163,24 +228,31 @@ export const carBrands = [
         cardImage: "./assets/cards-imgs/lamborghini.jpg", 
         hash: "#lamborghini",
         description: "Lamborghini is an Italian manufacturer of high-performance luxury cars, known for their bold designs and powerful engines.",
-        history: "Lamborghini was founded in 1963 by Ferruccio Lamborghini to challenge Ferrari. It became known for its exotic, high-performance sports cars with aggressive styling.",
+        topImg: "./assets/imgs/lamboSection.jpg",
+        history1:[
+            "Lamborghini was founded in 1963 by Ferruccio Lamborghini in Sant'Agata Bolognese, Italy. Initially producing tractors, Ferruccio aimed to create a luxury sports car to rival Ferrari. The first model, the 350 GT, debuted in 1964, showcasing Lamborghini's commitment to performance and design.",
+        ],
+        history2:[
+            "In the late 1960s, Lamborghini gained fame with the Miura, a revolutionary mid-engine supercar that set new standards for performance and design. The brand continued to innovate with models like the Countach and Diablo, becoming synonymous with outrageous styling and powerful V12 engines.",
+            "After financial struggles in the 1970s, Lamborghini was acquired by Chrysler in 1987, leading to the introduction of the Lamborghini Jalpa and the revival of the Countach. In 1998, Volkswagen Group acquired Lamborghini, ensuring its future and expanding its lineup with models like the Gallardo and Huracán."
+        ],
         highlights: [
             "Founded in 1963 in Italy",
             "Famous for high-performance supercars",
             "V12-powered beasts like the Aventador and Countach",
             "Innovative aerodynamics and futuristic designs"
         ],
+        flagship:[
+            "The Lamborghini Sián is the brand's first hybrid supercar, combining a naturally aspirated V12 engine with a supercapacitor-based electric motor. It delivers 819 hp and features cutting-edge aerodynamics and design, showcasing Lamborghini's commitment to performance and innovation."
+        ],
+        legacy:[
+            "Lamborghini is the epitome of Italian automotive passion and performance. Known for its outrageous designs and thunderous V12 engines, Lamborghini has redefined the supercar segment. From the iconic Miura to the modern-day Aventador, Lamborghini continues to push boundaries, blending art and engineering in every model."
+        ],
         gallery: [
-            "./assets/gallery/lamborghini-1.jpg",
-            "./assets/gallery/lamborghini-2.jpg",
-            "./assets/gallery/lamborghini-3.jpg"
+            "./assets/gallery/lambo-1.jpg",
+            "./assets/gallery/lambo-2.jpg",
+            "./assets/gallery/lambo-3.jpg"
         ]
-    },
-    { 
-        name: "Bugatti", 
-        cardImage: "./assets/cards-imgs/bugatti.jpg", 
-        hash: "#bugatti", // Hash-based navigation
-        description: "Bugatti is a French luxury automobile manufacturer renowned for its high-speed performance and extraordinary engineering."
     },
     { 
         name: "McLaren", 

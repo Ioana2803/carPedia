@@ -118,11 +118,11 @@ export class CarDetailsView {
             document.getElementById("brand-legacy").innerText = car.legacy?.join(" ") || "Information not available.";
             document.getElementById("legacy-image").src = car.gallery?.[2] || "";
 
-            // this.galleryContainer.innerHTML = "";
-            // car.gallery?.forEach(imgSrc => {
-            //     const img = this.createElement("img", "", { src: imgSrc, alt: car.name });
-            //     this.galleryContainer.appendChild(img);
-            // });
+            this.galleryContainer.innerHTML = "";
+            car.gallery?.forEach(imgSrc => {
+                const img = this.createElement("img", "", { src: imgSrc, alt: car.name });
+                this.galleryContainer.appendChild(img);
+            });
         } 
         else {
             this.title.innerText = "Car Not Found";
