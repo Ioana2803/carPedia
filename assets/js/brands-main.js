@@ -5,5 +5,5 @@ import { CarBrandsView } from "./carBrandsView.js";
 const navParent = document.querySelector('.nav-container');
 new NavBarView(navParent);
 
-const brandsSection = document.querySelector('.container');
-new CarBrandsView(brandsSection);
+const container = document.getElementById('car-brands-container');
+new CarBrandsView(container);

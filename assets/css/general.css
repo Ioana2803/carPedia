@@ -48,8 +48,10 @@ nav {
 .menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+
+    gap: 25px;
     padding: 0 20px;
+    align-items: center;
 }
 
 .menu li {
@@ -95,7 +97,7 @@ nav {
 
 .dropdown-column a {
     display: block;
-    padding: 8px 12px;
+    padding: 10px 12px;
     text-decoration: none;
 
     color: white;
