@@ -257,26 +257,126 @@ export const carBrands = [
     { 
         name: "McLaren", 
         cardImage: "./assets/cards-imgs/mclaren.jpg", 
-        hash: "#mclaren", // Hash-based navigation
-        description: "McLaren is a British automaker specializing in the production of high-performance sports cars."
+        hash: "#mclaren",
+        description: "McLaren is a British automaker specializing in the production of high-performance sports cars.",
+        topImg: "./assets/imgs/mclarenSection.jpg",
+        history1:[
+            "McLaren was founded in 1963 by New Zealand racing driver Bruce McLaren. Initially focused on motorsport, the company quickly gained recognition for its innovative engineering and design. In 1966, McLaren entered Formula 1, achieving its first victory in 1968.",
+        ],
+        history2:[
+            "In the 1980s, McLaren became a dominant force in Formula 1, winning multiple championships with legendary drivers like Ayrton Senna and Alain Prost. The brand expanded into road cars with the introduction of the McLaren F1 in 1992, which set new standards for performance and technology.",
+            "In the 2000s, McLaren continued to innovate with models like the Mercedes-Benz SLR McLaren and the MP4-12C. The company was restructured in 2010, focusing on high-performance sports cars and hybrid technology. Today, McLaren is known for its cutting-edge design, lightweight construction, and advanced aerodynamics."
+        ],
+        highlights: [
+            "Founded in 1963 in England",
+            "Known for Formula 1 racing and supercars",
+            "Innovative technology and lightweight design",
+            "Iconic models include the McLaren F1 and P1"
+        ],
+        flagship:[
+            "The McLaren P1 is a hybrid hypercar that combines a 3.8L twin-turbo V8 engine with an electric motor, producing a total of 903 hp. With a top speed of 217 mph and a 0-60 mph time of just 2.7 seconds, the P1 features advanced aerodynamics and lightweight construction, showcasing McLaren's commitment to performance and innovation."
+        ],
+        legacy:[
+            "McLaren is synonymous with innovation, speed, and racing heritage. From its roots in Formula 1 to the creation of the iconic F1 road car, McLaren has consistently pushed the boundaries of automotive engineering. With a commitment to lightweight design and cutting-edge technology, McLaren continues to redefine performance in the supercar segment."
+        ],
+        gallery: [
+            "./assets/gallery/mclaren-1.jpg",
+            "./assets/gallery/mclaren-2.jpg",
+            "./assets/gallery/mclaren-3.jpg"
+        ]   
     },
     { 
         name: "Mercedes", 
         cardImage: "./assets/cards-imgs/mercedes.jpg", 
-        hash: "#mercedes", // Hash-based navigation
-        description: "Mercedes-Benz is a German luxury vehicle manufacturer known for its luxurious designs and cutting-edge technology."
+        hash: "#mercedes",
+        description: "Mercedes-Benz is a German luxury vehicle manufacturer known for its luxurious designs and cutting-edge technology.",
+        topImg: "./assets/imgs/mercedesSection.jpg",
+        history1:[
+            "Mercedes-Benz was founded in 1926, but its roots trace back to Karl Benz's invention of the first gasoline-powered car in 1886. The brand emerged from the merger of Benz & Cie and Daimler-Motoren-Gesellschaft, creating a legacy of innovation and luxury.",
+        ],
+        history2:[
+            "In the early 20th century, Mercedes-Benz gained fame for its high-performance vehicles and success in motorsport. The brand introduced iconic models like the 300SL Gullwing and the S-Class, setting standards for luxury and technology.",
+            "Over the decades, Mercedes-Benz has been at the forefront of automotive innovation, pioneering safety features, performance enhancements, and luxury amenities. Today, it continues to lead in electric mobility with its EQ lineup, blending tradition with modernity."
+        ],
+        highlights: [
+            "Founded in 1926 in Germany",
+            "Luxury vehicles with advanced technology",
+            "Innovative safety features and performance",
+            "Iconic models include the S-Class and G-Class"
+        ],
+        flagship:[
+            "The Mercedes-Benz S-Class is the brand's flagship luxury sedan, known for its opulent interior, advanced technology, and exceptional performance. It features a range of powerful engines, cutting-edge driver assistance systems, and a luxurious cabin with the latest infotainment technology."
+        ],
+        legacy:[
+            "Mercedes-Benz is a symbol of luxury, innovation, and performance. With a legacy spanning over a century, the brand has set benchmarks in automotive engineering and design. From pioneering safety features to creating iconic models like the S-Class, Mercedes-Benz continues to lead the industry with its commitment to excellence."
+        ],
+        gallery: [
+            "./assets/gallery/mercedes-1.jpg",
+            "./assets/gallery/mercedes-2.jpg",
+            "./assets/gallery/mercedes-3.jpg"
+        ]
     },
     { 
         name: "Nissan", 
         cardImage: "./assets/cards-imgs/nissan.jpg", 
         hash: "#nissan", // Hash-based navigation
-        description: "Nissan is a Japanese multinational automobile manufacturer known for producing a wide range of affordable vehicles."
+        description: "Nissan is a Japanese multinational automobile manufacturer known for producing a wide range of affordable vehicles.",
+        topImg: "./assets/imgs/nissanSection.jpg",
+        history1:[
+            "Nissan was founded in 1933 as the Jidosha Seico Co., Ltd. and later became known as Nissan Motor Co., Ltd. The company initially produced small trucks and cars, gaining recognition for its Datsun brand in the 1930s. After World War II, Nissan expanded its production and entered international markets.",
+        ],
+        history2:[
+            "In the 1960s, Nissan gained global recognition with models like the Datsun 240Z, which became a symbol of affordable sports cars. The brand continued to innovate with the introduction of the Nissan Skyline and the GT-R series, known for their performance and technology.",
+            "In recent years, Nissan has focused on electric vehicles, launching the Nissan Leaf as one of the world’s best-selling electric cars. The brand continues to evolve, embracing sustainability and advanced technology in its vehicle lineup."
+        ],
+        highlights: [
+            "Founded in 1933 in Japan",
+            "Known for affordable and reliable vehicles",
+            "Pioneering electric vehicles with the Nissan Leaf",
+            "Iconic models include the GT-R and Z series"
+        ],
+        flagship:[
+            "The Nissan GT-R is a high-performance sports car known for its advanced technology and powerful twin-turbo V6 engine. With a top speed of 196 mph and a 0-60 mph time of just 2.9 seconds, the GT-R combines cutting-edge aerodynamics with a luxurious interior, making it a true icon in the world of performance cars."
+        ],
+        legacy:[
+            "Nissan is a pioneer in automotive innovation, blending reliability with performance. From the iconic Datsun 240Z to the groundbreaking Leaf electric vehicle, Nissan has consistently pushed boundaries. With a commitment to sustainability and advanced technology, Nissan continues to shape the future of mobility."
+        ],
+        gallery: [
+            "./assets/gallery/nissan-1.jpg",
+            "./assets/gallery/nissan-2.jpg",
+            "./assets/gallery/nissan-3.jpg"
+        ]
     },
     { 
         name: "Pagani", 
         cardImage: "./assets/cards-imgs/pagani.jpg", 
         hash: "#pagani", // Hash-based navigation
-        description: "Pagani is an Italian manufacturer of high-performance hypercars, known for their exotic designs and exclusivity."
+        description: "Pagani is an Italian manufacturer of high-performance hypercars, known for their exotic designs and exclusivity.",
+        topImg: "./assets/imgs/paganiSection.jpg",
+        history1:[
+            "Pagani was founded in 1992 by Horacio Pagani, an Argentine engineer and car designer. The company is based in Modena, Italy, and is known for producing some of the most exclusive and high-performance hypercars in the world. The first model, the Zonda, debuted in 1999 and quickly gained acclaim for its unique design and engineering excellence.",
+        ],
+        history2:[
+            "The Zonda was followed by the Huayra, which further established Pagani's reputation for innovation and craftsmanship. Pagani cars are known for their lightweight construction, advanced aerodynamics, and attention to detail, often featuring bespoke interiors and cutting-edge technology.",
+            "Pagani continues to produce limited-edition hypercars that blend art and engineering, appealing to collectors and enthusiasts worldwide."
+        ],
+        highlights: [
+            "Founded in 1992 in Italy",
+            "Known for hypercars with unique designs",
+            "Limited production and exclusivity",
+            "Iconic models include the Zonda and Huayra"
+        ],
+        flagship:[
+            "The Pagani Huayra is a hypercar that combines a 6.0L twin-turbo V12 engine with advanced aerodynamics and lightweight construction. With a top speed of 238 mph and a 0-60 mph time of just 2.8 seconds, the Huayra features a luxurious interior and cutting-edge technology, showcasing Pagani's commitment to performance and artistry."
+        ],
+        legacy:[
+            "Pagani is a name synonymous with automotive artistry and engineering excellence. Founded by Horacio Pagani, the brand has redefined hypercars with its unique blend of performance and design. From the iconic Zonda to the breathtaking Huayra, Pagani vehicles are masterpieces that push the boundaries of technology and craftsmanship."
+        ],
+        gallery: [
+            "./assets/gallery/pagani-1.jpg",
+            "./assets/gallery/pagani-2.jpg",
+            "./assets/gallery/pagani-3.jpg"
+        ]
     },
     { 
         name: "Porsche", 
