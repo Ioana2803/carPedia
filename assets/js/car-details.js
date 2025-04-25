@@ -6,7 +6,13 @@ const container = document.querySelector(".container");
 new NavBarView(navParent);
 
 const brandName = decodeURIComponent(window.location.hash.substring(1)).replace(/-/g, " ");
-const car = carBrands.find(car => car.name.toLowerCase() === brandName.toLowerCase());
+// cont carName = 
+const car = carBrands.find(car => 
+    car.name.replace(/[-\s]/g, "").toLowerCase() === brandName.replace(/\s/g, "").toLowerCase()
+);
+
+console.log("Brand Name:", brandName); // Debug the brand name
+console.log("Car Object:", car); // Debug the car object
 
 export class CarDetailsView {
     constructor() {

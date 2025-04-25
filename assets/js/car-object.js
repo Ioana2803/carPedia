@@ -319,7 +319,7 @@ export const carBrands = [
     { 
         name: "Nissan", 
         cardImage: "./assets/cards-imgs/nissan.jpg", 
-        hash: "#nissan", // Hash-based navigation
+        hash: "#nissan",
         description: "Nissan is a Japanese multinational automobile manufacturer known for producing a wide range of affordable vehicles.",
         topImg: "./assets/imgs/nissanSection.jpg",
         history1:[
@@ -350,7 +350,7 @@ export const carBrands = [
     { 
         name: "Pagani", 
         cardImage: "./assets/cards-imgs/pagani.jpg", 
-        hash: "#pagani", // Hash-based navigation
+        hash: "#pagani",
         description: "Pagani is an Italian manufacturer of high-performance hypercars, known for their exotic designs and exclusivity.",
         topImg: "./assets/imgs/paganiSection.jpg",
         history1:[
@@ -381,25 +381,125 @@ export const carBrands = [
     { 
         name: "Porsche", 
         cardImage: "./assets/cards-imgs/porsche.jpg", 
-        hash: "#porsche", // Hash-based navigation
-        description: "Porsche is a German luxury and sports car manufacturer, famous for its precision engineering and sleek designs."
+        hash: "#porsche",
+        description: "Porsche is a German luxury and sports car manufacturer, famous for its precision engineering and sleek designs.",
+        topImg: "./assets/imgs/porscheSection.jpg",
+        history1:[
+            "Porsche was founded in 1931 by Ferdinand Porsche in Stuttgart, Germany. Initially, the company provided vehicle development consulting services. In 1948, the first car to bear the Porsche name, the Porsche 356, was produced by Ferdinand's son, Ferdinand 'Ferry' Porsche.",
+        ],
+        history2:[
+            "The 356 quickly gained popularity for its performance and design, establishing Porsche as a manufacturer of sports cars. In the 1960s, Porsche introduced the iconic 911, which became a symbol of the brand and is still in production today.",
+            "Over the decades, Porsche has expanded its lineup with models like the Boxster, Cayenne, and Panamera, blending performance with luxury. The brand is also known for its success in motorsport, particularly in endurance racing."
+        ],
+        highlights: [
+            "Founded in 1931 in Germany",
+            "Iconic models like the Porsche 911 and Cayenne",
+            "Known for precision engineering and performance",
+            "Strong presence in motorsports, especially endurance racing"
+        ],
+        flagship:[
+            "The Porsche 911 Turbo S is a high-performance sports car known for its iconic design and powerful twin-turbo flat-six engine. With a top speed of 205 mph and a 0-60 mph time of just 2.6 seconds, the Turbo S combines luxury with cutting-edge technology, making it one of the fastest and most desirable sports cars in the world."
+        ],
+        legacy:[
+            "Porsche is a name synonymous with performance, precision, and passion. With a legacy rooted in motorsport and iconic models like the 911, Porsche has redefined the sports car segment. Its commitment to engineering excellence and innovation continues to shape the future of high-performance vehicles."
+        ],
+        gallery: [
+            "./assets/gallery/porsche-1.jpg",
+            "./assets/gallery/porsche-2.jpg",
+            "./assets/gallery/porsche-3.jpg"
+        ]
     },
-    { 
-        name: "Rolls-Royce", 
-        cardImage: "./assets/cards-imgs/rolls-royce.jpg", 
-        hash: "#rolls-royce", // Hash-based navigation
-        description: "Rolls-Royce is a British manufacturer of luxury automobiles, renowned for their impeccable craftsmanship and elegance."
+    {
+        name: "Rolls-Royce",
+        cardImage: "./assets/cards-imgs/rolls-royce.jpg",
+        hash: "#rolls-royce",
+        description: "Rolls-Royce is a British manufacturer of luxury automobiles, renowned for their impeccable craftsmanship and elegance.",
+        topImg: "./assets/imgs/rollsRoyceSection.jpg",
+        history1:[
+            "Rolls-Royce was founded in 1904 by Charles Rolls and Henry Royce in Manchester, England. The brand quickly gained a reputation for producing high-quality luxury cars, with the Rolls-Royce Silver Ghost becoming known as 'the best car in the world' in the early 20th century.",
+        ],
+        history2:[
+            "In the 1920s and 1930s, Rolls-Royce expanded its lineup with iconic models like the Phantom and the 20/25 HP. The brand became synonymous with luxury and elegance, often associated with royalty and celebrities.",
+            "After World War II, Rolls-Royce faced financial difficulties and was nationalized in 1971. The brand was privatized in the 1980s and has since continued to produce bespoke luxury vehicles, known for their craftsmanship and attention to detail."
+        ],
+        highlights: [
+            "Founded in 1904 in England",
+            "Known for luxury and bespoke craftsmanship",
+            "Iconic models include the Phantom and Ghost",
+            "Symbol of elegance and prestige"
+        ],
+        flagship:[
+            "The Rolls-Royce Phantom is the brand's flagship luxury sedan, known for its opulent interior, advanced technology, and exceptional performance. It features a powerful V12 engine, a spacious cabin with bespoke options, and cutting-edge driver assistance systems, making it the epitome of luxury and refinement."
+        ],
+        legacy:[
+            "Rolls-Royce is the epitome of luxury and craftsmanship. With a legacy spanning over a century, the brand has set benchmarks in automotive excellence. From the iconic Silver Ghost to the modern Phantom, Rolls-Royce continues to define opulence and sophistication in the automotive world."
+        ],
+        gallery: [
+            "./assets/gallery/rolls-1.jpg",
+            "./assets/gallery/rolls-2.jpg",
+            "./assets/gallery/rolls-3.jpg"
+        ]
     },
     { 
         name: "Toyota", 
         cardImage: "./assets/cards-imgs/toyota.jpg", 
-        hash: "#toyota", // Hash-based navigation
-        description: "Toyota is a Japanese multinational automotive manufacturer, producing a wide variety of reliable and affordable vehicles."
+        hash: "#toyota",
+        description: "Toyota is a Japanese multinational automotive manufacturer, producing a wide variety of reliable and affordable vehicles.",
+        topImg: "./assets/imgs/toyotaSection.jpg",
+        history1:[
+            "Toyota was founded in 1937 by Kiichiro Toyoda in Japan. The company initially produced automatic looms before transitioning to automobile manufacturing. The first passenger car, the Toyota AA, was introduced in 1936, marking the brand's entry into the automotive market.",
+        ],
+        history2:[
+            "In the post-World War II era, Toyota focused on rebuilding and expanding its production capabilities. The brand gained global recognition in the 1960s with models like the Toyota Corolla, which became one of the best-selling cars in history.",
+            "In the 1990s, Toyota introduced the Lexus brand, focusing on luxury vehicles. The company has also been a pioneer in hybrid technology with the introduction of the Toyota Prius in 1997, leading the way in sustainable mobility."
+        ],
+        highlights: [
+            "Founded in 1937 in Japan",
+            "Known for reliability and affordability",
+            "Pioneering hybrid technology with the Prius",
+            "Diverse lineup including sedans, SUVs, and trucks"
+        ],
+        flagship:[
+            "The Toyota Land Cruiser is a legendary SUV known for its off-road capability and luxury features. With a powerful V8 engine, advanced four-wheel-drive system, and a spacious interior, the Land Cruiser combines ruggedness with comfort, making it a favorite among adventurers and luxury SUV enthusiasts."
+        ],
+        legacy:[
+            "Toyota is a global leader in automotive manufacturing, known for its commitment to quality, reliability, and innovation. With a legacy of producing some of the world's best-selling cars, Toyota has set benchmarks in efficiency and sustainability. From the iconic Corolla to the pioneering Prius, Toyota continues to shape the future of mobility."
+        ],
+        gallery: [
+            "./assets/gallery/toyota-1.jpg",
+            "./assets/gallery/toyota-2.jpg",
+            "./assets/gallery/toyota-3.jpg"
+        ]
     },
     { 
         name: "Volkswagen", 
         cardImage: "./assets/cards-imgs/volkswagen.jpg", 
         hash: "#volkswagen", // Hash-based navigation
-        description: "Volkswagen is a German automaker known for its iconic cars like the Beetle and its focus on innovation and sustainability."
+        description: "Volkswagen is a German automaker known for its iconic cars like the Beetle and its focus on innovation and sustainability.",
+        topImg: "./assets/imgs/volkswagenSection.jpg",
+        history1:[
+            "Volkswagen was founded in 1937 in Germany, originally established by the German Labour Front to create a 'people's car' (Volkswagen in German). The first model, the Volkswagen Beetle, designed by Ferdinand Porsche, became one of the best-selling cars in history.",
+        ],
+        history2:[
+            "After World War II, Volkswagen focused on rebuilding and expanding its production capabilities. The brand gained global recognition in the 1960s and 1970s with models like the Type 2 (Microbus) and the Golf.",
+            "In recent years, Volkswagen has embraced electric mobility with its ID. series, showcasing its commitment to sustainability and innovation in the automotive industry."
+        ],
+        highlights: [
+            "Founded in 1937 in Germany",
+            "Known for iconic models like the Beetle and Golf",
+            "Focus on innovation and sustainability",
+            "Diverse lineup including sedans, SUVs, and electric vehicles"
+        ],
+        flagship:[
+            "The Volkswagen ID.4 is an all-electric SUV that combines practicality with advanced technology. With a range of up to 250 miles and spacious interior, the ID.4 features cutting-edge driver assistance systems and a modern infotainment interface, showcasing Volkswagen's commitment to electric mobility."
+        ],
+        legacy:[
+            "Volkswagen is a symbol of German engineering and innovation. With a legacy rooted in the iconic Beetle and a diverse lineup of vehicles, Volkswagen has shaped the automotive landscape. From the classic Golf to the modern ID. series, Volkswagen continues to lead in technology and sustainability."
+        ],
+        gallery: [
+            "./assets/gallery/volkswagen-1.jpg",
+            "./assets/gallery/volkswagen-2.jpg",
+            "./assets/gallery/volkswagen-3.jpg"
+        ]
     }
 ];
