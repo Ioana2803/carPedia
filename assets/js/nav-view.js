@@ -5,6 +5,7 @@ export class NavBarView {
     constructor(parentDOMElement) {
         this.parent = parentDOMElement;
         this.searchModel = new SearchModel();
+        this.currentFilteredBrands = [];
         this.totalRot = 0;
         this.init();
     }
@@ -45,6 +46,36 @@ export class NavBarView {
         this.searchInput = this.createElement("input", "", { type: "text", placeholder: "Search..." });
         this.searchDiv.append(this.searchInput);
         this.navContainer.append(this.searchDiv);
+
+        this.selectedIndex = -1;
+
+        this.searchInput.addEventListener("keydown", (e) => {
+            const results = this.searchDiv.querySelectorAll(".search-result-item");
+
+            if (e.key === "ArrowDown") {
+                e.preventDefault();
+                this.selectedIndex = Math.min(this.selectedIndex + 1, results.length - 1);
+            } 
+            else if (e.key === "ArrowUp") {
+                e.preventDefault();
+                this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+            } 
+            else if (e.key === "Enter" && this.selectedIndex >= 0) {
+                const selectedBrand = filteredBrands[selectedIndex];
+                const brandNameFormatted = selectedBrand.name.replace(/\s+/g, '-');
+                window.location.href = `car-details.html#${brandNameFormatted}`;
+                // window.location.reload();
+            }
+
+            // Highlight the selected suggestion
+            results.forEach((result, idx) => {
+                if (idx === this.selectedIndex) {
+                    result.classList.add("selected");
+                } else {
+                    result.classList.remove("selected");
+                }
+            });
+        });
 
         // Add search event listeners
         this.searchInput.addEventListener("input", this.handleSearch.bind(this));
@@ -89,95 +120,49 @@ export class NavBarView {
             const firstBrandHash = this.searchModel.getFirstBrandHash();
             if (firstBrandHash) {
                 window.location.href = `car-details.html#${firstBrandHash}`;
-                window.location.reload();
             } else {
                 alert("No matching brand found.");
             }
         }
     }
-
+    
     updateSearchResults() {
-        // Clear any existing results before adding new ones
+        this.currentFilteredBrands = this.searchModel.getFilteredBrands();
+        const filteredBrands = this.currentFilteredBrands;
+    
         const existingResults = this.searchDiv.querySelector(".search-results");
         if (existingResults) {
-            existingResults.remove(); // Remove the old dropdown
+            existingResults.remove();
         }
     
-        const filteredBrands = this.searchModel.getFilteredBrands();
         const searchResults = this.createElement("div", "search-results");
     
-        // Check if we have any results, and apply the active class to show the dropdown
         if (filteredBrands.length > 0) {
-            searchResults.classList.add("active"); // Show the suggestions
+            searchResults.classList.add("active");
         } else {
-            searchResults.classList.remove("active"); // Hide the suggestions if no results
+            searchResults.classList.remove("active");
         }
     
-        searchResults.innerHTML = ""; // Clear any previous results
+        searchResults.innerHTML = "";
     
-        let selectedIndex = -1; // Keep track of the currently selected suggestion
-    
-        // Populate the search results with brand names
         filteredBrands.forEach((brand, index) => {
             const brandElement = this.createElement("div", "search-result-item");
             brandElement.textContent = brand.name;
     
-            // Highlight the selected suggestion
-            if (index === selectedIndex) {
-                brandElement.classList.add("selected");
-            }
-    
             brandElement.addEventListener("click", () => {
-                const brandHash = brand.name.replace(/\s+/g, '-');
-                window.location.hash = brandHash;
-                window.location.href = "car-details.html" + window.location.hash;
-                window.location.reload(); // Reload to reflect the new URL
+                const brandNameFormatted = brand.name.replace(/\s+/g, '-');
+                window.location.href = `car-details.html#${brandNameFormatted}`;
             });
     
             searchResults.append(brandElement);
         });
     
-        // If no results, display a message
         if (filteredBrands.length === 0) {
             searchResults.innerHTML = "<p>No results found.</p>";
         }
     
-        // Append the search results to the search div
         this.searchDiv.append(searchResults);
-    
-        // Add keydown event to navigate through the results
-        this.searchInput.addEventListener("keydown", (e) => {
-            const results = this.searchDiv.querySelectorAll(".search-result-item");
-    
-            if (e.key === "ArrowDown") {
-                // Move down through the suggestions
-                selectedIndex = Math.min(selectedIndex + 1, results.length - 1);
-            } 
-            else if (e.key === "ArrowUp") {
-                // Move up through the suggestions
-                selectedIndex = Math.max(selectedIndex - 1, 0);
-            } 
-            else if (e.key === "Enter" && selectedIndex >= 0) {
-                // Select the currently highlighted suggestion
-                const selectedBrand = filteredBrands[selectedIndex];
-
-                window.location.hash = selectedBrand.name.replace(/\s+/g, '-');
-                window.location.href = "car-details.html" + window.location.hash;
-                window.location.reload();
-
-                return;
-            }
-    
-            // Update the selected index and highlight the correct item
-            results.forEach((result, idx) => {
-                if (idx === selectedIndex) {
-                    result.classList.add("selected");
-                } else {
-                    result.classList.remove("selected");
-                }
-            });
-        });
-    }    
+    }
 
     addMenuItem(text, link) {
         const li = this.createElement("li");
