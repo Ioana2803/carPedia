@@ -72,8 +72,9 @@
     margin-bottom: 10px;
 }
 
+
 .default-text {
-    max-height: 110px;
+    max-height: fit-content;
 }
 
 .history-text {
@@ -81,7 +82,7 @@
 }
 
 .history-text.expanded {
-    max-height: 500px;
+    max-height: fit-content;
     display: block;
 }
 
@@ -190,7 +191,7 @@
 }
 
 /* ==================== Responsive Design ==================== */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .content-section {
         flex-direction: column;
         text-align: center;
@@ -205,25 +206,15 @@
         width: 100%;
     }
 
-    #gallery-container img {
-        width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
     #brand-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
-    .content-section h2 {
+    .history-container h2 {
         font-size: 1.8rem;
     }
-
-    .content-section p {
+    
+    .history-container p {
         font-size: 1rem;
     }
-
-    #gallery-container img {
-        width: 90%;
-    }
-} */
+}
