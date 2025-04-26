@@ -1,8 +1,10 @@
-import { carBrands } from "./car-object.js";
+import { carBrands } from './car-object.js';
+import { SearchModel } from './nav-model.js';
 
 export class NavBarView {
     constructor(parentDOMElement) {
         this.parent = parentDOMElement;
+        this.searchModel = new SearchModel();
         this.totalRot = 0;
         this.init();
     }
@@ -44,6 +46,10 @@ export class NavBarView {
         this.searchDiv.append(this.searchInput);
         this.navContainer.append(this.searchDiv);
 
+        // Add search event listeners
+        this.searchInput.addEventListener("input", this.handleSearch.bind(this));
+        this.searchInput.addEventListener("keypress", this.handleEnterSearch.bind(this));
+
         // Menu List
         this.navMenu = this.createElement("ul", "menu");
         this.navContainer.append(this.navMenu);
@@ -73,6 +79,106 @@ export class NavBarView {
         this.navContainer.append(this.mobileDropdown);
     }
 
+    handleSearch() {
+        this.searchModel.updateQuery(this.searchInput.value);
+        this.updateSearchResults();
+    }
+
+    handleEnterSearch(event) {
+        if (event.key === "Enter") {
+            const firstBrandHash = this.searchModel.getFirstBrandHash();
+            if (firstBrandHash) {
+                window.location.href = `car-details.html#${firstBrandHash}`;
+                window.location.reload();
+            } else {
+                alert("No matching brand found.");
+            }
+        }
+    }
+
+    updateSearchResults() {
+        // Clear any existing results before adding new ones
+        const existingResults = this.searchDiv.querySelector(".search-results");
+        if (existingResults) {
+            existingResults.remove(); // Remove the old dropdown
+        }
+    
+        const filteredBrands = this.searchModel.getFilteredBrands();
+        const searchResults = this.createElement("div", "search-results");
+    
+        // Check if we have any results, and apply the active class to show the dropdown
+        if (filteredBrands.length > 0) {
+            searchResults.classList.add("active"); // Show the suggestions
+        } else {
+            searchResults.classList.remove("active"); // Hide the suggestions if no results
+        }
+    
+        searchResults.innerHTML = ""; // Clear any previous results
+    
+        let selectedIndex = -1; // Keep track of the currently selected suggestion
+    
+        // Populate the search results with brand names
+        filteredBrands.forEach((brand, index) => {
+            const brandElement = this.createElement("div", "search-result-item");
+            brandElement.textContent = brand.name;
+    
+            // Highlight the selected suggestion
+            if (index === selectedIndex) {
+                brandElement.classList.add("selected");
+            }
+    
+            brandElement.addEventListener("click", () => {
+                const brandHash = brand.name.replace(/\s+/g, '-');
+                window.location.hash = brandHash;
+                window.location.href = "car-details.html" + window.location.hash;
+                window.location.reload(); // Reload to reflect the new URL
+            });
+    
+            searchResults.append(brandElement);
+        });
+    
+        // If no results, display a message
+        if (filteredBrands.length === 0) {
+            searchResults.innerHTML = "<p>No results found.</p>";
+        }
+    
+        // Append the search results to the search div
+        this.searchDiv.append(searchResults);
+    
+        // Add keydown event to navigate through the results
+        this.searchInput.addEventListener("keydown", (e) => {
+            const results = this.searchDiv.querySelectorAll(".search-result-item");
+    
+            if (e.key === "ArrowDown") {
+                // Move down through the suggestions
+                selectedIndex = Math.min(selectedIndex + 1, results.length - 1);
+            } 
+            else if (e.key === "ArrowUp") {
+                // Move up through the suggestions
+                selectedIndex = Math.max(selectedIndex - 1, 0);
+            } 
+            else if (e.key === "Enter" && selectedIndex >= 0) {
+                // Select the currently highlighted suggestion
+                const selectedBrand = filteredBrands[selectedIndex];
+
+                window.location.hash = selectedBrand.name.replace(/\s+/g, '-');
+                window.location.href = "car-details.html" + window.location.hash;
+                window.location.reload();
+
+                return;
+            }
+    
+            // Update the selected index and highlight the correct item
+            results.forEach((result, idx) => {
+                if (idx === selectedIndex) {
+                    result.classList.add("selected");
+                } else {
+                    result.classList.remove("selected");
+                }
+            });
+        });
+    }    
+
     addMenuItem(text, link) {
         const li = this.createElement("li");
         const a = this.createElement("a", "", { href: link, innerText: text });
@@ -82,47 +188,43 @@ export class NavBarView {
 
     addDropdownMenu(text, link, subItems) {
         const li = this.createElement("li", "dropdown-container");
-    
-        // Main menu item (clicking this should go to brands.html)
         const a = this.createElement("a", "", { href: link, innerText: text });
-    
-        // Create dropdown menu
+
         const dropdown = this.createElement("div", "dropdown");
-    
-        const columns = 3; // Number of columns in the dropdown
-        const columnSize = Math.ceil(subItems.length / columns); // Calculate size of each column
-    
+
+        const columns = 3;
+        const columnSize = Math.ceil(subItems.length / columns);
+
         for (let i = 0; i < columns; i++) {
             const column = this.createElement("div", "dropdown-column");
-    
+
             subItems.slice(i * columnSize, (i + 1) * columnSize).forEach(item => {
-                const subLink = this.createElement("a", "", { 
-                    href: `car-details.html?brand=${item.hash}`, 
-                    innerText: item.name 
+                const subLink = this.createElement("a", "", {
+                    href: `car-details.html?brand=${item.hash}`,
+                    innerText: item.name
                 });
-    
+
                 subLink.addEventListener("click", () => {
-                    window.location.hash = item.name.replace(/\s+/g, '-'); // Convert spaces to dashes for URL safety
-                    window.location.href = "car-details.html" + window.location.hash; // Redirect to details page
-                    window.location.reload(); // Reload the page to reflect the new URL
+                    window.location.hash = item.name.replace(/\s+/g, '-');
+                    window.location.href = "car-details.html" + window.location.hash;
+                    window.location.reload();
                 });
 
                 column.append(subLink);
             });
-    
+
             dropdown.append(column);
         }
-    
-        // Append elements
+
         li.append(a, dropdown);
         this.navMenu.append(li);
     }
-    
+
     toggleMenu() {
         this.mobileDropdown.classList.toggle("active");
         this.rotateRight(this.menuButton, 90);
     }
-    
+
     rotateRight(ele, deg){
         this.totalRot += deg;
         deg = this.totalRot % 180;        
