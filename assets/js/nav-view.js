@@ -120,6 +120,7 @@ export class NavBarView {
             const firstBrandHash = this.searchModel.getFirstBrandHash();
             if (firstBrandHash) {
                 window.location.href = `car-details.html#${firstBrandHash}`;
+                // window.location.reload();
             } else {
                 alert("No matching brand found.");
             }
@@ -152,6 +153,7 @@ export class NavBarView {
             brandElement.addEventListener("click", () => {
                 const brandNameFormatted = brand.name.replace(/\s+/g, '-');
                 window.location.href = `car-details.html#${brandNameFormatted}`;
+                // window.location.reload();
             });
     
             searchResults.append(brandElement);
@@ -192,7 +194,7 @@ export class NavBarView {
                 subLink.addEventListener("click", () => {
                     window.location.hash = item.name.replace(/\s+/g, '-');
                     window.location.href = "car-details.html" + window.location.hash;
-                    window.location.reload();
+                    // window.location.reload();
                 });
 
                 column.append(subLink);
@@ -216,3 +218,7 @@ export class NavBarView {
         ele.style.transform = "rotate("+ deg +"deg)";
     }
 }
+
+window.addEventListener('hashchange', () => {
+    location.reload();
+});
