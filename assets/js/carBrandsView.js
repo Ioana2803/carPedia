@@ -38,8 +38,8 @@ export class CarBrandsView {
 
             // Click event
             cardDiv.addEventListener("click", () => {
-                window.location.hash = brand.name.replace(/\s+/g, '-');
-                window.location.href = "car-details.html" + window.location.hash;
+                const brandFormatted = brand.name.replace(/\s+/g, '-');
+                window.location.href = `car-details.html#${brandFormatted}`;
             });
         });
 
