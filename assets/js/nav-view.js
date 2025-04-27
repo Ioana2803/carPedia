@@ -7,6 +7,8 @@ export class NavBarView {
         this.searchModel = new SearchModel();
         this.currentFilteredBrands = [];
         this.totalRot = 0;
+        this.selectedIndex = -1;
+        this.isNavigating = false;  // Flag to track if the user is navigating with arrows
         this.init();
     }
 
@@ -47,39 +49,12 @@ export class NavBarView {
         this.searchDiv.append(this.searchInput);
         this.navContainer.append(this.searchDiv);
 
-        this.selectedIndex = -1;
-
-        this.searchInput.addEventListener("keydown", (e) => {
-            const results = this.searchDiv.querySelectorAll(".search-result-item");
-
-            if (e.key === "ArrowDown") {
-                e.preventDefault();
-                this.selectedIndex = Math.min(this.selectedIndex + 1, results.length - 1);
-            } 
-            else if (e.key === "ArrowUp") {
-                e.preventDefault();
-                this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
-            } 
-            else if (e.key === "Enter" && this.selectedIndex >= 0) {
-                const selectedBrand = filteredBrands[selectedIndex];
-                const brandNameFormatted = selectedBrand.name.replace(/\s+/g, '-');
-                window.location.href = `car-details.html#${brandNameFormatted}`;
-                // window.location.reload();
-            }
-
-            // Highlight the selected suggestion
-            results.forEach((result, idx) => {
-                if (idx === this.selectedIndex) {
-                    result.classList.add("selected");
-                } else {
-                    result.classList.remove("selected");
-                }
-            });
-        });
 
         // Add search event listeners
-        this.searchInput.addEventListener("input", this.handleSearch.bind(this));
-        this.searchInput.addEventListener("keypress", this.handleEnterSearch.bind(this));
+        this.searchInput.addEventListener("input", this.handleSearch.bind(this)); // For search input
+        this.searchInput.addEventListener("keypress", this.handleEnterSearch.bind(this)); // For Enter key press
+        this.searchInput.addEventListener("keydown", this.handleArrowNavigation.bind(this)); // For arrow key navigation
+
 
         // Menu List
         this.navMenu = this.createElement("ul", "menu");
@@ -117,53 +92,88 @@ export class NavBarView {
 
     handleEnterSearch(event) {
         if (event.key === "Enter") {
+            // If the user is navigating with the arrow keys, prevent default behavior
+            if (this.isNavigating) {
+                this.isNavigating = false;  // Reset the flag after enter is pressed
+                return;  // Do nothing (prevent Enter search behavior)
+            }
+    
+            // If there's no navigation, proceed with regular Enter key behavior
             const firstBrandHash = this.searchModel.getFirstBrandHash();
             if (firstBrandHash) {
                 window.location.href = `car-details.html#${firstBrandHash}`;
-                // window.location.reload();
             } else {
                 alert("No matching brand found.");
             }
         }
     }
     
-    updateSearchResults() {
-        this.currentFilteredBrands = this.searchModel.getFilteredBrands();
-        const filteredBrands = this.currentFilteredBrands;
     
-        const existingResults = this.searchDiv.querySelector(".search-results");
-        if (existingResults) {
-            existingResults.remove();
+    handleArrowNavigation(e) {
+        const results = this.searchDiv.querySelectorAll(".search-result-item");
+    
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            this.selectedIndex = Math.min(this.selectedIndex + 1, results.length - 1);
+            this.isNavigating = true;  // Indicate that the user is navigating
+        } 
+        else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+            this.isNavigating = true;  // Indicate that the user is navigating
+        } 
+        else if (e.key === "Enter" && this.selectedIndex >= 0) {
+            const selectedBrand = this.currentFilteredBrands[this.selectedIndex];
+            const brandHash = selectedBrand.name.replace(/\s+/g, '-');
+            window.location.href = `car-details.html#${brandHash}`;
         }
     
-        const searchResults = this.createElement("div", "search-results");
+        results.forEach((result, idx) => {
+            result.classList.toggle("selected", idx === this.selectedIndex);
+        });
+    }
     
+
+    updateSearchResults() {
+        console.log("Updating search results...");  // Check if this is being triggered
+        this.currentFilteredBrands = this.searchModel.getFilteredBrands();
+        const filteredBrands = this.currentFilteredBrands;
+     
+        const existingResults = this.searchDiv.querySelector(".search-results");
+        if (existingResults) {
+            existingResults.remove();  // Ensure previous results are removed
+        }
+     
+        const searchResults = this.createElement("div", "search-results");
+     
         if (filteredBrands.length > 0) {
             searchResults.classList.add("active");
         } else {
             searchResults.classList.remove("active");
         }
-    
-        searchResults.innerHTML = "";
-    
+     
+        searchResults.innerHTML = "";  // Make sure to clear the previous content
+     
         filteredBrands.forEach((brand, index) => {
-            const brandElement = this.createElement("div", "search-result-item");
+            const brandElement = this.createElement("div", "search-result-item", {
+                tabindex: "0"
+            });
             brandElement.textContent = brand.name;
-    
+     
             brandElement.addEventListener("click", () => {
                 const brandNameFormatted = brand.name.replace(/\s+/g, '-');
                 window.location.href = `car-details.html#${brandNameFormatted}`;
                 // window.location.reload();
             });
-    
+     
             searchResults.append(brandElement);
         });
-    
+     
         if (filteredBrands.length === 0) {
             searchResults.innerHTML = "<p>No results found.</p>";
         }
-    
-        this.searchDiv.append(searchResults);
+     
+        this.searchDiv.append(searchResults);  // Append the updated search results
     }
 
     addMenuItem(text, link) {
@@ -192,8 +202,8 @@ export class NavBarView {
                 });
 
                 subLink.addEventListener("click", () => {
-                    window.location.hash = item.name.replace(/\s+/g, '-');
-                    window.location.href = "car-details.html" + window.location.hash;
+                    const newName = item.name.replace(/\s+/g, '-');
+                    window.location.href = `car-details.html#${newName}`;
                     // window.location.reload();
                 });
 
