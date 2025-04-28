@@ -150,7 +150,7 @@ export const carBrands = [
             "Home of the Hellcat and Demon series"
         ],
         flagship:[
-          
+            "The Dodge Challenger SRT Demon is a limited-production muscle car known for its extreme performance. Powered by a supercharged 6.2L HEMI V8 engine producing 840 hp, it features drag racing technology, lightweight construction, and advanced aerodynamics. With a 0-60 mph time of just 2.3 seconds, the Demon is designed for straight-line speed and dominance on the drag strip."
         ],
         legacy:[
             "Dodge is a symbol of American muscle, rebellion, and raw power. From the legendary Charger and Challenger to its modern-day Hellcat lineup, Dodge has carved out a legacy built on bold design and unrelenting performance. Its influence in drag racing and pop culture has secured its place as a true icon of American horsepower."

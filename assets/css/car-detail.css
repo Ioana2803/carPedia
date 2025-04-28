@@ -27,8 +27,6 @@
     z-index: 0; /* Behind the text */
     object-fit: cover;
     filter: brightness(0.5);
-
-    /* object-position: 50% 70%; */
 }
 
 #brand-title {
@@ -189,6 +187,13 @@
 .back-link:hover {
     color: #0056b3;
 }
+
+/* @media screen and (min-width: 768px) {
+    .section img{
+        object-position: 50% 60%;
+    }
+    
+} */
 
 /* ==================== Responsive Design ==================== */
 @media (max-width: 768px) {
