@@ -45,7 +45,7 @@ export class CarDetailsView {
         this.innovationSection = this.createSection("Innovation & Technology", "brand-innovation", "tech-image", true);
         this.flagshipSection = this.createSection("Flagship Model", "flagship-info", "flagship-image");
         this.legacySection = this.createSection("Legacy & Achievements", "brand-legacy", "legacy-image", true);
-        this.gallerySection = this.createGallerySection();
+        // this.gallerySection = this.createGallerySection();
         this.backLink = this.createBackLink();
 
         this.parent.append(
@@ -54,7 +54,7 @@ export class CarDetailsView {
             this.innovationSection,
             this.flagshipSection,
             this.legacySection,
-            this.gallerySection,
+            // this.gallerySection,
             this.backLink
         );
     }
@@ -91,13 +91,13 @@ export class CarDetailsView {
         return section;
     }
 
-    createGallerySection() {
-        const section = this.createElement("section", "", { id: "gallery" });
-        const galleryTitle = this.createElement("h2", "", { innerText: "Gallery" });
-        this.galleryContainer = this.createElement("div", "", { id: "gallery-container" });
-        section.append(galleryTitle, this.galleryContainer);
-        return section;
-    }
+    // createGallerySection() {
+    //     const section = this.createElement("section", "", { id: "gallery" });
+    //     const galleryTitle = this.createElement("h2", "", { innerText: "Gallery" });
+    //     this.galleryContainer = this.createElement("div", "", { id: "gallery-container" });
+    //     section.append(galleryTitle, this.galleryContainer);
+    //     return section;
+    // }
 
     createBackLink() {
         return this.createElement("a", "back-link", { href: "brands.html", innerText: "Back to Brands Page" });
@@ -119,11 +119,11 @@ export class CarDetailsView {
             document.getElementById("brand-legacy").innerText = car.legacy?.join(" ") || "Information not available.";
             document.getElementById("legacy-image").src = car.gallery?.[2] || "";
 
-            this.galleryContainer.innerHTML = "";
-            car.gallery?.forEach(imgSrc => {
-                const img = this.createElement("img", "", { src: imgSrc, alt: car.name });
-                this.galleryContainer.appendChild(img);
-            });
+            // this.galleryContainer.innerHTML = "";
+            // car.gallery?.forEach(imgSrc => {
+            //     const img = this.createElement("img", "", { src: imgSrc, alt: car.name });
+            //     this.galleryContainer.appendChild(img);
+            // });
         } 
         else {
             this.title.innerText = "Car Not Found";
