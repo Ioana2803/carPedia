@@ -201,7 +201,7 @@ nav {
 }
 
 /* Menu Items */
-.menu-dropdown a {
+.menu-dropdown .burger {
     display: block;
     color: white;
     text-decoration: none;
@@ -209,7 +209,7 @@ nav {
     border-radius: 5px;
 }
 
-.menu-dropdown a:hover {
+.menu-dropdown .burger:hover {
     background: rgba(255, 255, 255, 0.1);
     transition: background 0.3s ease-in-out;
 }
@@ -271,6 +271,12 @@ nav {
     }
 }
 
+@media (min-width: 767px){
+    .clone{
+        display: none;
+    }
+}
+
 @media (max-width: 767px) {
     .logo {
         padding-left: 5px;
@@ -323,5 +329,24 @@ nav {
         border: none;
         outline: none;
         color: #1B1F3B;
+    }
+    
+    .menu-dropdown {
+        display: flex;
+        top: 100%;
+        left: 20%;
+    }
+
+    .menu-dropdown .clone {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+    
+    .menu-dropdown .clone:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transition: background 0.3s ease-in-out;
     }
 }

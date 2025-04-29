@@ -77,8 +77,18 @@ export class NavBarView {
         // Mobile Dropdown Menu
         this.mobileDropdown = this.createElement("div", "menu-dropdown");
 
+        // Copy the desktop menu items into mobile
+        const desktopMenuItems = this.navMenu.querySelectorAll("li > a");
+        desktopMenuItems.forEach(item => {
+            const linkClone = this.createElement("a", "clone", { 
+                href: item.getAttribute("href"), 
+                innerText: item.innerText 
+            });
+            this.mobileDropdown.append(linkClone);
+        });
+
         ["Community", "About", "Account"].forEach(text => {
-            const link = this.createElement("a", "", { href: "#", innerText: text });
+            const link = this.createElement("a", "burger", { href: "#", innerText: text });
             this.mobileDropdown.append(link);
         });
 

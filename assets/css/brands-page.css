@@ -5,6 +5,7 @@
     position: relative;
     background: linear-gradient(315deg, rgba(17, 17, 9, 1) 0%, rgba(175, 53, 52, 1) 35%, rgba(81, 178, 197, 1) 100%);
     background-size: cover;
+    /* background-color: black; */
     /* Alternative background: */
     /* background: linear-gradient(90deg, rgb(73, 2, 5) 10%, rgb(36, 56, 73) 100%); */
 }
