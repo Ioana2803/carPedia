@@ -66,7 +66,7 @@ export class NavBarView {
         // Dynamically select the first three brands from carBrands
         const brands = carBrands.map(brand => ({ name: brand.name, hash: brand.hash }));
         this.addDropdownMenu("Brands", "brands.html", brands);
-        this.addMenuItem("News", "#");
+        this.addMenuItem("News", "news.html");
 
         // Menu Button
         this.menuButton = this.createElement("button", "menu-btn", { onclick: () => this.toggleMenu() });
@@ -88,7 +88,7 @@ export class NavBarView {
         });
 
         ["Community", "About", "Account"].forEach(text => {
-            const link = this.createElement("a", "burger", { href: "#", innerText: text });
+            const link = this.createElement("a", "burger", { href: `${text.toLowerCase()}.html`, innerText: text });
             this.mobileDropdown.append(link);
         });
 
