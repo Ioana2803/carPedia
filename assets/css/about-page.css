@@ -27,8 +27,8 @@ section {
 
 /* === Accent Text === */
 .accent {
-    color: #00fff7;
-    text-shadow: 0 0 8px #00fff7, 0 0 16px #00fff7;
+    color: #489dac;
+    text-shadow: 0 0 8px #489dac, 0 0 16px #489dac;
 }
 
 /* === Hero Section === */
@@ -49,7 +49,7 @@ section {
 }
 
 .about-hero-subtitle {
-    color: #00fff7;
+    color: #489dac;
     font-weight: bold;
     margin-bottom: 12px;
     letter-spacing: 2px;
@@ -76,7 +76,7 @@ section {
     height: 320px;
     object-fit: cover;
     border-radius: 18px;
-    box-shadow: 0 0 32px #00fff7, 0 0 8px #00fff7;
+    box-shadow: 0 0 32px #489dac, 0 0 8px #489dac;
     filter: brightness(0.9) contrast(1.1);
     flex: 1;
 }
@@ -92,7 +92,7 @@ section {
 }
 
 .about-offers-subtitle {
-    color: #00fff7;
+    color: #489dac;
     font-weight: bold;
     margin-bottom: 12px;
     font-size: 1.1rem;
@@ -132,8 +132,8 @@ section {
 .tech-icon,
 .stats-icon {
     font-size: 1.3em;
-    color: #00fff7;
-    filter: drop-shadow(0 0 4px #00fff7);
+    color: #489dac;
+    filter: drop-shadow(0 0 4px #489dac);
 }
 
 /* === Responsive Design === */
