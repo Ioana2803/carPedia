@@ -7,7 +7,6 @@
 }
 
 body {
-    /* background-color: #0D0D0D; */
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -20,10 +19,9 @@ nav {
     position: relative;
     height: 8vh;
     z-index: 999;
-
-    
-    background-color: #0D0D0D;
-    backdrop-filter: blur(10px);
+    background: #181818; /* semi-transparent dark */
+    backdrop-filter: blur(18px);         /* strong blur */
+    -webkit-backdrop-filter: blur(18px); /* Safari support */
     padding: 12px 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }

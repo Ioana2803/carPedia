@@ -1,0 +1,154 @@
+/* === Container and Layout === */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.main-content-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto 40px auto;
+    padding: 32px 24px;
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 0 32px #00fff722, 0 0 8px #00fff722;
+}
+
+/* === Accent Text === */
+.accent {
+    color: #00fff7;
+    text-shadow: 0 0 8px #00fff7, 0 0 16px #00fff7;
+}
+
+/* === Hero Section === */
+.about-hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: none;
+    box-shadow: none;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.about-hero-content {
+    flex: 2;
+    min-width: 280px;
+}
+
+.about-hero-subtitle {
+    color: #00fff7;
+    font-weight: bold;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.about-hero-headline {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.about-hero-desc {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    white-space: pre-line;
+}
+
+.about-hero-img {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 0 32px #00fff7, 0 0 8px #00fff7;
+    filter: brightness(0.9) contrast(1.1);
+    flex: 1;
+}
+
+/* === Offers, Why, Tech, Stats Sections === */
+.about-offers-title,
+.about-why-title,
+.about-tech-title,
+.about-stats-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-offers-subtitle {
+    color: #00fff7;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.about-offers-desc,
+.about-why-desc {
+    color: #b0b0b0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+.about-offers-list,
+.about-why-list,
+.about-tech-list,
+.about-stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.about-offers-list li,
+.about-why-list li,
+.about-tech-list li,
+.about-stats-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offer-icon,
+.why-icon,
+.tech-icon,
+.stats-icon {
+    font-size: 1.3em;
+    color: #00fff7;
+    filter: drop-shadow(0 0 4px #00fff7);
+}
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+    .about-hero-section {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .about-hero-img {
+        margin: 0 auto;
+    }
+
+    .main-content-container {
+        padding: 16px 0;
+    }
+}
