@@ -11,6 +11,11 @@
     display: block;
 }
 
+/* === MAIN CONTENT === */
+.main-content-container {
+    background-color: #000000;
+}
+
 /* === Divider === */
 .divider {
     font-size: 30px;
@@ -74,4 +79,17 @@ p{
     width: 5px;
     background-color: #C2171F;
     opacity: 0.6;
+}
+
+@media (max-width: 425px) {
+    .history-columns {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+    .history-divider {
+        display: none; /* Hide the divider on smaller screens */
+    }
+
+    .divider h2{
+        font-size: 35px;
+    }
 }
