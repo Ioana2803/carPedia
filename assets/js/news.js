@@ -30,10 +30,13 @@ export class NewsView {
         const response = await fetch(url);
         const data = await response.json();
     
-        // Remove duplicates by title and filter for car-related content
+        // Remove duplicates by title and filter for car-related content, excluding accidents
         const seen = new Set();
         const carKeywords = [
             "car", "automotive", "car industry", "formula one", "f1", "motorsport", "electric car", "supercar"
+        ];
+        const accidentKeywords = [
+            "accident", "crash", "collision", "injured", "fatal", "dead", "wreck", "hospitalized"
         ];
         this.newsData = data.articles.filter(article => {
             if (!article.title) return false;
@@ -41,6 +44,9 @@ export class NewsView {
             const text = (article.title + " " + (article.description || "")).toLowerCase();
             const isCarRelated = carKeywords.some(kw => text.includes(kw));
             if (!isCarRelated) return false;
+            // Exclude accident-related news
+            const isAccident = accidentKeywords.some(kw => text.includes(kw));
+            if (isAccident) return false;
             if (seen.has(article.title)) return false;
             seen.add(article.title);
             return true;

@@ -4,10 +4,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-size: cover;
 
-    background: linear-gradient(315deg, #0d0d0d, #242a3d);  /*Black to dark navy*/
-    color: whitesmoke;
+    background: #0a0a0a; /* solid black */
+    color: #fff;
+    /* background-size: cover;
+    background: linear-gradient(315deg, #0d0d0d, #242a3d);
+    color: whitesmoke; */
 }
 
 /* ==================== Top Section ==================== */
@@ -27,6 +29,9 @@
     z-index: 0; /* Behind the text */
     object-fit: cover;
     filter: brightness(0.5);
+
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 8px 32px #489dac33;
 }
 
 #brand-title {
@@ -35,32 +40,49 @@
     font-size: 3rem;
     font-weight: bold;
     color: white;
+
+    color: #fff;
+    text-shadow: 0 0 8px #489dac, 0 0 16px #489dac;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ==================== History Section ==================== */
 .history-section {
     margin: 40px 20px;
     text-align: center;
-    border-radius: 10px;
-    background: #ffffff;
-    /* color: #222; */
+    /* border-radius: 10px;
+    background: #ffffff; */
+    border-radius: 18px;
+    background: #181818;
+    box-shadow: 0 4px 24px #489dac22;
+    width: 90%;
+    max-width: 900px;
 }
 
 .history-container {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    /* background: rgba(20, 20, 20, 0.5); */
-    background-color: #489daccb;
-    box-shadow: 0 4px 10px rgba(236, 236, 236, 0.2);
+    /* border-radius: 10px;
+    background: rgba(20, 20, 20, 0.5); */
+    /* background-color: #489daccb;
+    box-shadow: 0 4px 10px rgba(236, 236, 236, 0.2); */
+
+    border-radius: 18px;
+    background: rgba(72,157,172,0.10);
+    box-shadow: 0 4px 10px #489dac22;
 }
 
 .history-container h2 {
     text-align: left;
     font-size: 2rem;
     margin-bottom: 20px;
-    color: white;
+    /* color: white; */
+
+    color: #489dac;
+    text-shadow: 0 0 8px #489dac44;
 }
 
 .history-container p {
@@ -68,6 +90,8 @@
     line-height: 1.2;
     text-align: justify;
     margin-bottom: 10px;
+
+    color: #fff;
 }
 
 
@@ -109,6 +133,11 @@
     max-width: 1200px;
     padding: 50px 0;
     border-bottom: 2px solid #C2171F;
+
+    background: #181818;
+    border-radius: 18px;
+    margin: 40px auto 0 auto;
+    box-shadow: 0 4px 24px #489dac22;
 }
 
 .content-section img {
@@ -140,8 +169,30 @@
     flex-direction: row;
 }
 
+/* ==================== Back Link ==================== */
+.back-link {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 30px 0;
+    text-decoration: none;
+    color: #489dac;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 24px;
+    /* background: #181818;
+    box-shadow: 0 2px 8px #489dac33; */
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    /* background: #489dac; */
+    background: #181818;
+    color: #fff;
+}
+
 /* ==================== Gallery Section ==================== */
-#gallery {
+/* #gallery {
     text-align: center;
     padding: 50px 0;
     width: 80%;
@@ -170,29 +221,6 @@
 
 #gallery-container img:hover {
     transform: scale(1.05);
-}
-
-/* ==================== Back Link ==================== */
-.back-link {
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 30px 0;
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.back-link:hover {
-    color: #0056b3;
-}
-
-/* @media screen and (min-width: 768px) {
-    .section img{
-        object-position: 50% 60%;
-    }
-    
 } */
 
 /* ==================== Responsive Design ==================== */
