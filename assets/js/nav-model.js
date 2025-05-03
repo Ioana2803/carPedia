@@ -1,4 +1,4 @@
-import { carBrands } from './car-object.js';
+import { carBrands } from '../data/car-object.js';
 
 export class SearchModel {
     constructor() {

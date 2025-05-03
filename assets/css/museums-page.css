@@ -1,0 +1,136 @@
+:root {
+    --accent-blue: #489dac;
+    --accent-red: #C2171F;
+}
+
+body, .museums-container {
+    background: #0a0a0a;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.main-content-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.museum-searchbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+.museum-search-input {
+    width: 320px;
+    padding: 12px 18px;
+    border-radius: 24px;
+    border: none;
+    font-size: 1.1rem;
+    background: #181818;
+    color: #fff;
+    box-shadow: 0 2px 8px var(--accent-blue)22;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+.museum-search-input:focus {
+    box-shadow: 0 4px 16px var(--accent-blue)44;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+}
+
+.card {
+    background: #181818;
+    border-left: 2px solid var(--accent-red);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px var(--accent-blue)22;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0; /* mb-4 on col handles bottom margin */
+    width: 100%;
+    min-height: 350px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 6px 24px var(--accent-blue)44;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    background: #222;
+}
+
+.card-title {
+    color: var(--accent-blue);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #b0b0b0;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.card-text .emoji {
+    font-size: 1.1em;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.text-danger {
+    color: var(--accent-red) !important;
+    font-weight: bold;
+}
+
+.link {
+    color: #489dac;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #489dac;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+    display: inline-block;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+.link:hover, .link:focus {
+    color: #C2171F;
+    border-bottom: 2px solid #C2171F;
+    text-decoration: none;
+}
+
+.no-results {
+    color: var(--accent-red);
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 32px 0;
+}
+
+@media (max-width: 700px) {
+    .main-content-container {
+        padding: 12px 0;
+    }
+    .museum-search-input {
+        width: 90vw;
+        min-width: 0;
+    }
+    .card-img-top {
+        height: 140px;
+    }
+    .card {
+        min-height: 260px;
+    }
+}

@@ -1,0 +1,102 @@
+[
+    {
+      "museum_id": 1,
+      "name": "Autoworld Brussels",
+      "country": "Belgium",
+      "city": "Brussels",
+      "address": "Parc du Cinquantenaire 11",
+      "website_url": "https://www.autoworld.be/home",
+      "description": "A beautiful museum with over 250 European and American classic cars.",
+      "image_url": "./assets/imgs/autoworld.jpg"
+    },
+    {
+      "museum_id": 2,
+      "name": "Beaulieu National Motor Museum",
+      "country": "UK",
+      "city": "Beaulieu",
+      "address": "John Montagu Building, Beaulieu",
+      "website_url": "https://www.nationalmotormuseum.org.uk/",
+      "description": "Over 250 vehicles tell the story of motoring in Britain, from the earliest cars to F1.",
+      "image_url": "./assets/imgs/beaulieu.jpg"
+    },
+    {
+      "museum_id": 3,
+      "name": "Cité de l’Automobile",
+      "country": "France",
+      "city": "Mulhouse",
+      "address": "17 Rue de la Mertzau",
+      "website_url": "https://www.citedelautomobile.com/en/home/",
+      "description": "Home to the Schlumpf Collection, the world’s largest display of Bugatti cars.",
+      "image_url": "./assets/imgs/citeauto.jpg"
+    },
+    {
+      "museum_id": 4,
+      "name": "Louwman Museum",
+      "country": "Netherlands",
+      "city": "The Hague",
+      "address": "Leidsestraatweg 57",
+      "website_url": "https://www.louwmanmuseum.nl/en/",
+      "description": "Features one of the world’s oldest private car collections, from 1886 to today.",
+      "image_url": "./assets/imgs/louwman.jpg"
+    },
+    {
+      "museum_id": 5,
+      "name": "Mercedes-Benz Museum",
+      "country": "Germany",
+      "city": "Stuttgart",
+      "address": "Mercedesstraße 100",
+      "website_url": "https://www.mercedes-benz.com/en/classic/museum/",
+      "description": "A stunning museum dedicated to the history and innovation of Mercedes-Benz.",
+      "image_url": "./assets/imgs/mercedes.jpg"
+    },
+    {
+      "museum_id": 6,
+      "name": "Museo Ferrari",
+      "country": "Italy",
+      "city": "Maranello",
+      "address": "Via Dino Ferrari, 43",
+      "website_url": "https://www.ferrari.com/en-EN/museums/maranello",
+      "description": "Historic Ferrari museum with legendary cars and racing history.",
+      "image_url": "./assets/imgs/ferrari.jpg"
+    },
+    {
+      "museum_id": 7,
+      "name": "National Corvette Museum",
+      "country": "USA",
+      "city": "Bowling Green",
+      "address": "350 Corvette Dr",
+      "website_url": "https://www.corvettemuseum.org/",
+      "description": "Dedicated to the Chevrolet Corvette, with rare models and interactive exhibits.",
+      "image_url": "./assets/imgs/corvette.jpg"
+    },
+    {
+      "museum_id": 8,
+      "name": "Petersen Automotive Museum",
+      "country": "USA",
+      "city": "Los Angeles",
+      "address": "6060 Wilshire Blvd",
+      "website_url": "https://www.petersen.org/",
+      "description": "One of the world’s largest automotive museums, featuring classic, rare, and futuristic cars.",
+      "image_url": "./assets/imgs/petersen.jpg"
+    },
+    {
+      "museum_id": 9,
+      "name": "Porsche Museum",
+      "country": "Germany",
+      "city": "Stuttgart",
+      "address": "Porscheplatz 1",
+      "website_url": "https://www.porsche.com/museum/en/",
+      "description": "A modern museum dedicated to the history and innovation of Porsche.",
+      "image_url": "./assets/imgs/porsche-museum.jpg"
+    },
+    {
+      "museum_id": 10,
+      "name": "Toyota Automobile Museum",
+      "country": "Japan",
+      "city": "Nagakute",
+      "address": "41-100 Yokomichi",
+      "website_url": "https://www.toyota.co.jp/Museum/",
+      "description": "Showcases the history of Toyota and the global automobile industry.",
+      "image_url": "./assets/imgs/toyota.jpg"
+    }
+  ]

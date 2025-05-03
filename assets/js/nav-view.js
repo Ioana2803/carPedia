@@ -1,4 +1,4 @@
-import { carBrands } from './car-object.js';
+import { carBrands } from '../data/car-object.js';
 import { SearchModel } from './nav-model.js';
 
 export class NavBarView {
@@ -87,8 +87,8 @@ export class NavBarView {
             this.mobileDropdown.append(linkClone);
         });
 
-        ["Community", "About", "Account"].forEach(text => {
-            const link = this.createElement("a", "burger", { href: `${text.toLowerCase()}.html`, innerText: text });
+        ["Community", "Museums", "About CarPedia"].forEach(text => {
+            const link = this.createElement("a", "burger", { href: `${text.replace(/[-\s]/g, "").toLowerCase()}.html`, innerText: text });
             this.mobileDropdown.append(link);
         });
 

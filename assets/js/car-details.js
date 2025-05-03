@@ -1,4 +1,4 @@
-import { carBrands } from "./car-object.js";
+import { carBrands } from '../data/car-object.js';
 import { NavBarView } from "./nav-view.js";
 
 const navParent = document.querySelector(".nav-container");
