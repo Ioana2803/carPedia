@@ -26,6 +26,7 @@ export class CommunityView {
             input.maxLength = 20;
 
             const setBtn = document.createElement('button');
+            setBtn.type = "button";
             setBtn.className = "community-username-set-btn";
             setBtn.innerText = "Set Username";
             setBtn.onclick = () => {
@@ -44,6 +45,7 @@ export class CommunityView {
                 <span class="community-username-label">Username: <b>${this.username}</b></span>
             `;
             const changeBtn = document.createElement('button');
+            changeBtn.type = "button";
             changeBtn.className = "community-username-change-btn";
             changeBtn.innerText = "Change Username";
             changeBtn.onclick = () => {
