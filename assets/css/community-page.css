@@ -119,6 +119,7 @@ body, .community-container {
 .community-username-label {
     color: #489dac;
     font-size: 1.08rem;
+    margin-right: 10px;
 }
 .community-username-input {
     background: #222;
@@ -147,6 +148,12 @@ body, .community-container {
     font-weight: bold;
     font-size: 1.02rem;
     margin-bottom: 2px;
+}
+
+.community-username-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 @media (max-width: 700px) {

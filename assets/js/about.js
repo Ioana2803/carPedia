@@ -80,8 +80,8 @@ export class AboutView {
         techTitle.innerText = "TECHNOLOGIES USED";
         const techList = this.createElement('ul', 'about-tech-list');
         [
-            { icon: "💻", text: "HTML | CSS | JavaScript" },
-            { icon: "🛠️", text: "MySQL (for database-driven features)" }
+            { icon: "💻", text: "HTML | CSS | JavaScript" }
+            // { icon: "🛠️", text: "MySQL (for database-driven features)" }
         ].forEach(item => {
             const li = this.createElement('li');
             li.innerHTML = `<span class="tech-icon">${item.icon}</span> ${item.text}`;

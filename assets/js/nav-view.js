@@ -175,7 +175,7 @@ export class NavBarView {
      
         searchResults.innerHTML = "";  // Make sure to clear the previous content
      
-        filteredBrands.forEach((brand, index) => {
+        filteredBrands.forEach((brand) => {
             const brandElement = this.createElement("div", "search-result-item", {
                 tabindex: "0"
             });

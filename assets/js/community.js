@@ -16,20 +16,23 @@ export class CommunityView {
     renderUsernameBar() {
         const bar = document.createElement('div');
         bar.className = "community-username-bar mb-3";
-
+    
         if (!this.username || this.username === "Anonymous") {
-            // Show input to set username
             const input = document.createElement('input');
             input.type = "text";
             input.placeholder = "Enter your username";
             input.className = "community-username-input";
             input.maxLength = 20;
+            input.autocomplete = "off";
 
             const setBtn = document.createElement('button');
-            setBtn.type = "button";
+            setBtn.type = "button"; // important to avoid accidental form behavior
             setBtn.className = "community-username-set-btn";
             setBtn.innerText = "Set Username";
-            setBtn.onclick = () => {
+
+            setBtn.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 const val = input.value.trim();
                 if (val.length > 0) {
                     this.username = val;
@@ -39,21 +42,26 @@ export class CommunityView {
             };
 
             bar.append(input, setBtn);
-        } else {
+        } 
+        else {
             // Show username and change button
-            bar.innerHTML = `
-                <span class="community-username-label">Username: <b>${this.username}</b></span>
-            `;
+            const label = document.createElement('span');
+            label.className = "community-username-label";
+            label.innerHTML = `Username: <b>${this.username}</b>`;
+    
             const changeBtn = document.createElement('button');
             changeBtn.type = "button";
             changeBtn.className = "community-username-change-btn";
             changeBtn.innerText = "Change Username";
-            changeBtn.onclick = () => {
+            changeBtn.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 localStorage.removeItem("carpedia_community_username");
                 this.username = "Anonymous";
                 this.render();
             };
-            bar.appendChild(changeBtn);
+    
+            bar.append(label, changeBtn);
         }
         this.parentElement.appendChild(bar);
     }
@@ -71,6 +79,8 @@ export class CommunityView {
         postBtn.innerText = "Post";
 
         postBtn.onclick = () => {
+            e.preventDefault();
+            e.stopPropagation();
             const text = input.value.trim();
             if (text.length === 0) return;
             this.addComment(text);
