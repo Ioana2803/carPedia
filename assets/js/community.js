@@ -78,7 +78,7 @@ export class CommunityView {
         postBtn.className = "community-post-btn";
         postBtn.innerText = "Post";
 
-        postBtn.onclick = () => {
+        postBtn.onclick = (e) => {
             e.preventDefault();
             e.stopPropagation();
             const text = input.value.trim();
