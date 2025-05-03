@@ -25,7 +25,7 @@
       "country": "France",
       "city": "Mulhouse",
       "address": "17 Rue de la Mertzau",
-      "website_url": "https://www.citedelautomobile.com/en/home/",
+      "website_url": "https://www.musee-automobile.fr/en/",
       "description": "Home to the Schlumpf Collection, the world’s largest display of Bugatti cars.",
       "image_url": "./assets/imgs/citeauto.jpg"
     },
@@ -55,7 +55,7 @@
       "country": "Italy",
       "city": "Maranello",
       "address": "Via Dino Ferrari, 43",
-      "website_url": "https://www.ferrari.com/en-EN/museums/maranello",
+      "website_url": "https://www.ferrari.com/en-EN/museums/ferrari-maranello",
       "description": "Historic Ferrari museum with legendary cars and racing history.",
       "image_url": "./assets/imgs/ferrari.jpg"
     },
@@ -85,7 +85,7 @@
       "country": "Germany",
       "city": "Stuttgart",
       "address": "Porscheplatz 1",
-      "website_url": "https://www.porsche.com/museum/en/",
+      "website_url": "https://www.porsche.com/international/aboutporsche/porschemuseum/",
       "description": "A modern museum dedicated to the history and innovation of Porsche.",
       "image_url": "./assets/imgs/porsche-museum.jpg"
     },
@@ -95,7 +95,7 @@
       "country": "Japan",
       "city": "Nagakute",
       "address": "41-100 Yokomichi",
-      "website_url": "https://www.toyota.co.jp/Museum/",
+      "website_url": "hhttps://toyota-automobile-museum.jp/en/",
       "description": "Showcases the history of Toyota and the global automobile industry.",
       "image_url": "./assets/imgs/toyota.jpg"
     }

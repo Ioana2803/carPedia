@@ -93,6 +93,17 @@ export class NavBarView {
         });
 
         this.navContainer.append(this.mobileDropdown);
+
+        // Add event listener to hide search results when clicking outside
+        document.addEventListener('click', (event) => {
+            // Check if the click is outside the searchDiv
+            if (!this.searchDiv.contains(event.target)) {
+                const results = this.searchDiv.querySelector('.search-results');
+                if (results) {
+                    results.classList.remove('active');
+                }
+            }
+        });
     }
 
     handleSearch() {

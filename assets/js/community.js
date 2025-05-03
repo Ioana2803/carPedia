@@ -2,13 +2,58 @@ export class CommunityView {
     constructor(parentElement) {
         this.parentElement = parentElement;
         this.comments = this.loadComments();
+        this.username = this.loadUsername();
         this.render();
     }
 
     render() {
         this.parentElement.innerHTML = "";
+        this.renderUsernameBar();
         this.renderForm();
         this.renderComments();
+    }
+
+    renderUsernameBar() {
+        const bar = document.createElement('div');
+        bar.className = "community-username-bar mb-3";
+
+        if (!this.username || this.username === "Anonymous") {
+            // Show input to set username
+            const input = document.createElement('input');
+            input.type = "text";
+            input.placeholder = "Enter your username";
+            input.className = "community-username-input";
+            input.maxLength = 20;
+
+            const setBtn = document.createElement('button');
+            setBtn.className = "community-username-set-btn";
+            setBtn.innerText = "Set Username";
+            setBtn.onclick = () => {
+                const val = input.value.trim();
+                if (val.length > 0) {
+                    this.username = val;
+                    localStorage.setItem("carpedia_community_username", this.username);
+                    this.render();
+                }
+            };
+
+            bar.append(input, setBtn);
+        } else {
+            // Show username and change button
+            bar.innerHTML = `
+                <span class="community-username-label">Username: <b>${this.username}</b></span>
+            `;
+            const changeBtn = document.createElement('button');
+            changeBtn.className = "community-username-change-btn";
+            changeBtn.innerText = "Change Username";
+            changeBtn.onclick = () => {
+                localStorage.removeItem("carpedia_community_username");
+                this.username = "Anonymous";
+                this.render();
+            };
+            bar.appendChild(changeBtn);
+        }
+        this.parentElement.appendChild(bar);
     }
 
     renderForm() {
@@ -58,6 +103,10 @@ export class CommunityView {
         const card = document.createElement('div');
         card.className = "community-comment-card";
 
+        const user = document.createElement('div');
+        user.className = "community-comment-user";
+        user.innerText = comment.username;
+
         const text = document.createElement('div');
         text.className = "community-comment-text";
         text.innerText = comment.text;
@@ -73,12 +122,13 @@ export class CommunityView {
             this.deleteComment(idx);
         };
 
-        card.append(text, date, delBtn);
+        card.append(user, text, date, delBtn);
         return card;
     }
 
     addComment(text) {
         this.comments.unshift({
+            username: this.username,
             text,
             date: new Date().toISOString()
         });
@@ -102,5 +152,9 @@ export class CommunityView {
 
     saveComments() {
         localStorage.setItem("carpedia_community_comments", JSON.stringify(this.comments));
+    }
+
+    loadUsername() {
+        return localStorage.getItem("carpedia_community_username") || "Anonymous";
     }
 }
