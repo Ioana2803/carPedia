@@ -87,7 +87,7 @@ export class NavBarView {
             this.mobileDropdown.append(linkClone);
         });
 
-        ["Community", "Museums", "About CarPedia"].forEach(text => {
+        ["Community", "Museums", "About AutoPedia"].forEach(text => {
             const link = this.createElement("a", "burger", { href: `${text.replace(/[-\s]/g, "").toLowerCase()}.html`, innerText: text });
             this.mobileDropdown.append(link);
         });
