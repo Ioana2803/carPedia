@@ -21,6 +21,16 @@
     },
     {
       "museum_id": 3,
+      "name": "BMW Museum",
+      "country": "Germany",
+      "city": "Munich",
+      "address": "Am Olympiapark 2",
+      "website_url": "https://www.bmw-museum.de/en/",
+      "description": "A modern museum showcasing the history and innovation of BMW.",
+      "image_url": "./assets/imgs/bmw.jpg"
+    },
+    {
+      "museum_id": 4,
       "name": "Cité de l’Automobile",
       "country": "France",
       "city": "Mulhouse",
@@ -30,7 +40,7 @@
       "image_url": "./assets/imgs/citeauto.jpg"
     },
     {
-      "museum_id": 4,
+      "museum_id": 5,
       "name": "Louwman Museum",
       "country": "Netherlands",
       "city": "The Hague",
@@ -40,7 +50,7 @@
       "image_url": "./assets/imgs/louwman.jpg"
     },
     {
-      "museum_id": 5,
+      "museum_id": 6,
       "name": "Mercedes-Benz Museum",
       "country": "Germany",
       "city": "Stuttgart",
@@ -50,7 +60,7 @@
       "image_url": "./assets/imgs/mercedes.jpg"
     },
     {
-      "museum_id": 6,
+      "museum_id": 7,
       "name": "Museo Ferrari",
       "country": "Italy",
       "city": "Maranello",
@@ -60,7 +70,7 @@
       "image_url": "./assets/imgs/ferrari.jpg"
     },
     {
-      "museum_id": 7,
+      "museum_id": 8,
       "name": "National Corvette Museum",
       "country": "USA",
       "city": "Bowling Green",
@@ -70,7 +80,7 @@
       "image_url": "./assets/imgs/corvette.jpg"
     },
     {
-      "museum_id": 8,
+      "museum_id": 9,
       "name": "Petersen Automotive Museum",
       "country": "USA",
       "city": "Los Angeles",
@@ -80,7 +90,7 @@
       "image_url": "./assets/imgs/petersen.jpg"
     },
     {
-      "museum_id": 9,
+      "museum_id": 10,
       "name": "Porsche Museum",
       "country": "Germany",
       "city": "Stuttgart",
@@ -90,7 +100,17 @@
       "image_url": "./assets/imgs/porsche-museum.jpg"
     },
     {
-      "museum_id": 10,
+      "museum_id": 11,
+      "name": "Țiriac Collection",
+      "country": "Romania",
+      "city": "Bucharest",
+      "address": "Bulevardul Mircea Eliade 1",
+      "website_url": "https://tiriaccollection.ro/en/",
+      "description": "A private collection of classic and modern cars, showcasing automotive history.",
+      "image_url": "./assets/imgs/tiriac.jpg"
+    },
+    {
+      "museum_id": 12,
       "name": "Toyota Automobile Museum",
       "country": "Japan",
       "city": "Nagakute",
@@ -98,5 +118,25 @@
       "website_url": "hhttps://toyota-automobile-museum.jp/en/",
       "description": "Showcases the history of Toyota and the global automobile industry.",
       "image_url": "./assets/imgs/toyota.jpg"
+    },
+    {
+      "museum_id": 13,
+      "name": "Volkswagen Autostadt",
+      "country": "Germany",
+      "city": "Wolfsburg",
+      "address": "Stadtbrücke",
+      "website_url": "https://www.automuseum-volkswagen.de/en/",
+      "description": "A unique automotive theme park with a museum, factory tours, and more.",
+      "image_url": "./assets/imgs/vw.jpg"
+    },
+    {
+      "museum_id": 14,
+      "name": "Car Collection of Prince Rainier III",
+      "country": "Monaco",
+      "city": "Monaco",
+      "address": "Palais Princier",
+      "website_url": "https://www.mtcc.mc",
+      "description": "A collection of over 100 classic cars owned by Prince Rainier III.",
+      "image_url": "./assets/imgs/monaco.jpg"
     }
   ]
