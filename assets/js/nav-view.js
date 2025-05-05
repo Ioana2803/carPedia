@@ -34,8 +34,8 @@ export class NavBarView {
 
         // Logo Section
         this.logo = this.createElement("div", "logo");
-        this.logoImg = this.createElement("img", "", { src: "./assets/imgs/car-logo.png", alt: "AutoPedia Logo" });
-        this.logoSpan = this.createElement("span", "logo-text", { innerText: "AutoPedia" });
+        this.logoImg = this.createElement("img", "", { src: "./assets/imgs/car-logo.png", alt: "CarPedia Logo" });
+        this.logoSpan = this.createElement("span", "logo-text", { innerText: "CarPedia" });
         this.logo.append(this.logoImg, this.logoSpan);
         this.nav.append(this.logo);
 
@@ -87,7 +87,7 @@ export class NavBarView {
             this.mobileDropdown.append(linkClone);
         });
 
-        ["Community", "Museums", "About AutoPedia"].forEach(text => {
+        ["Community", "Museums", "About CarPedia"].forEach(text => {
             const link = this.createElement("a", "burger", { href: `${text.replace(/[-\s]/g, "").toLowerCase()}.html`, innerText: text });
             this.mobileDropdown.append(link);
         });

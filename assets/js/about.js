@@ -25,8 +25,8 @@ export class AboutView {
         const desc = this.createElement('p', 'about-hero-desc', {
             innerHTML:
                 `
-                <strong>Welcome to AutoPedia</strong>, your go-to digital encyclopedia for all things automotive. This site was created as a personal project by <strong>Ioana-Diana Guțu</strong>, a student at Colegiul Național „Dr. Ioan Meșotă” in Brașov.\n 
-                AutoPedia combines my passion for cars with my skills in web development, serving both as a showcase of my work and as my certification paper.\n
+                <strong>Welcome to CarPedia</strong>, your go-to digital encyclopedia for all things automotive. This site was created as a personal project by <strong>Ioana-Diana Guțu</strong>, a student at Colegiul Național „Dr. Ioan Meșotă” in Brașov.\n 
+                CarPedia combines my passion for cars with my skills in web development, serving both as a showcase of my work and as my certification paper.\n
                 It’s more than just a collection of specs — it’s a growing platform built with dedication, aiming to make car information accessible, visual, and easy to explore.
                 `
         });
@@ -34,7 +34,7 @@ export class AboutView {
 
         const heroImg = this.createElement('img', 'about-hero-img', {
             src: "./assets/imgs/about-hero.jpg", // Use your own image
-            alt: "About AutoPedia"
+            alt: "About CarPedia"
         });
 
         heroSection.append(heroContent, heroImg);
@@ -60,12 +60,12 @@ export class AboutView {
         });
         offersSection.append(offersTitle, offersSubtitle, offersList, offersDesc);
 
-        // WHY AutoPedia SECTION
+        // WHY CarPedia SECTION
         const whySection = this.createElement('section', 'about-why-section');
         const whyTitle = this.createElement('h2', 'about-why-title');
-        whyTitle.innerHTML = `WHY <span class="accent">AutoPedia?</span>`;
+        whyTitle.innerHTML = `WHY <span class="accent">CarPedia?</span>`;
         const whyDesc = this.createElement('p', 'about-why-desc', {
-            innerText: "Because great ideas start small.\nBecause learning by building is the most rewarding way to grow.\n\nAutoPedia blends clean code, modern design, and real automotive data into a single-page experience. It’s responsive, informative, and evolving — just like its creator."
+            innerText: "Because great ideas start small.\nBecause learning by building is the most rewarding way to grow.\n\nCarPedia blends clean code, modern design, and real automotive data into a single-page experience. It’s responsive, informative, and evolving — just like its creator."
         });
         const whyList = this.createElement('ul', 'about-why-list');
         [
