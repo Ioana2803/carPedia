@@ -105,10 +105,6 @@ nav {
     transition: background 0.3s ease-in-out;
 }
 
-/* .menu li:hover .dropdown {
-    display: block;
-} */
-
 .dropdown-column a:hover {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -221,11 +217,6 @@ nav {
     transition: background 0.3s ease-in-out;
 }
 
-/* Show dropdown when active */
-/* .menu-dropdown.active .clone {
-    display: block;
-} */
-
 /* === Menu Icon (Hamburger) === */
 .menu-container {
     display: flex;
@@ -275,12 +266,6 @@ nav {
 @media (min-width: 767px){
     .clone{
         display: none;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    nav {
-        height: 10vh;
     }
 }
 
