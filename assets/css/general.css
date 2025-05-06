@@ -278,6 +278,12 @@ nav {
     }
 }
 
+@media screen and (min-width: 1200px) {
+    nav {
+        height: 10vh;
+    }
+}
+
 @media (max-width: 767px) {
     .logo {
         padding-left: 5px;
@@ -292,6 +298,7 @@ nav {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        height: 10vh;
         padding: 10px;
     }
 
