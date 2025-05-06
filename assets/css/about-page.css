@@ -79,6 +79,8 @@ section {
     box-shadow: 0 0 32px #489dac, 0 0 8px #489dac;
     filter: brightness(0.9) contrast(1.1);
     flex: 1;
+    object-fit: cover;         /* umple containerul fără distorsiune */
+    object-position: center 10%; /* mută punctul focal mai jos */
 }
 
 /* === Offers, Why, Tech, Stats Sections === */
