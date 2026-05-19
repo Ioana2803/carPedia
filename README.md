@@ -33,7 +33,8 @@ Created as a personal project combining a passion for cars with web development 
 ### 💬 Community
 - Users can post and delete messages
 - Custom username support
-- Designed to connect with a backend/database
+- Data is stored locally per user (localStorage)
+- Backend/database integration possible in future versions
 
 ### 🏛️ Museums
 - Cards with photos, location, and description
