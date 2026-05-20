@@ -12,6 +12,7 @@ Created as a personal project combining a passion for cars with web development 
 - Hero section with full-width image
 - General history of the automobile
 - Search bar to find car brands directly
+- Fully responsive design (mobile, tablet, and desktop)
 
 ### 🏷️ Brands
 - Dropdown navigation menu with all brands
